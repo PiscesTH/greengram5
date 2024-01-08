@@ -53,7 +53,12 @@ public class JwtTokenProvider {
     }
 
     public String resolveToken(HttpServletRequest req) {
-        String headerAuthorization = req.getHeader(headerSchemeName);
+        String auth = req.getHeader(headerSchemeName);
+        if (auth == null) { return null; }
+        if (auth.startsWith(tokenType)){
+            return auth.substring(tokenType.length()).trim();
+        }
         return null;
+//        return auth == null ? null : auth.startsWith();
     }
 }
