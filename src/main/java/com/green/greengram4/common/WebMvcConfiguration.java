@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @Slf4j
 @Configuration
-public class WebMvcConfiguration implements WebMvcConfigurer {
+public class WebMvcConfiguration implements WebMvcConfigurer {  //새로고침 용 ?
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
