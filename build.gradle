@@ -41,6 +41,13 @@ dependencies {
     implementation 'com.google.firebase:firebase-admin:9.2.0'
     //swagger library
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl     위에랑 버전 같아야 오류 발생확률 x
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+
 
 
 }
