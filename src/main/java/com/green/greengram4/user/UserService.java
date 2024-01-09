@@ -20,7 +20,7 @@ public class UserService {
     private final UserFollowMapper followMapper;
     private final PasswordEncoder passwordEncoder;  //SecurityConfiguration 에서 빈등록 하고있음.
     private final JwtTokenProvider jwtTokenProvider;
-    private final AppProperties appProperties;
+//    private final AppProperties appProperties;
 
     public ResVo signup(UserSignupDto dto) {
 //        String hasedUpw = BCrypt.hashpw(dto.getUpw(), BCrypt.gensalt());
@@ -44,15 +44,17 @@ public class UserService {
         }
         if (passwordEncoder.matches(dto.getUpw(), procVo.getUpw())) {
             MyPrincipal principal = new MyPrincipal(procVo.getIuser());
-            String at = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
-            String rt = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
+//            String at = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
+//            String rt = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
+            String at = jwtTokenProvider.generateAccessToken(principal);
+            String rt = jwtTokenProvider.generateRefreshToken(principal);
 
             return UserSigninVo.builder()
                     .iuser(procVo.getIuser())
                     .nm(procVo.getNm())
                     .pic(procVo.getPic())
-                    .accessToken(at)
                     .result(Const.LOGIN_SUCCESS)
+                    .accessToken(at)
                     .build();
         }
         return UserSigninVo.builder().result(Const.LOGIN_DIFF_UPW).build();

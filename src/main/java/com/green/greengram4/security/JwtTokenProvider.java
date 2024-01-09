@@ -45,13 +45,21 @@ public class JwtTokenProvider {
         this.key = Keys.hmacShaKeyFor(keyBytes);    //키 만드는 법
     }
 
-    public String generateToken(MyPrincipal principal, long tokenValidMs) {
+    private String generateToken(MyPrincipal principal, long tokenValidMs) {
         return Jwts.builder()
                 .claims(createClaims(principal))    //토큰에 담기는 정보
                 .issuedAt(new Date(System.currentTimeMillis()))     //발행시간 설정
                 .expiration(new Date(System.currentTimeMillis() + tokenValidMs))    //만료시간 설정
                 .signWith(this.key)
                 .compact();
+    }
+
+    public String generateAccessToken(MyPrincipal principal){
+        return generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
+    }
+
+    public String generateRefreshToken(MyPrincipal principal){
+        return generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
     }
 
     private Claims createClaims(MyPrincipal principal) {    //Claims : key와 value 저장 가능
