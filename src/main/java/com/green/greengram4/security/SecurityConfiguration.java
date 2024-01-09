@@ -9,11 +9,13 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfiguration {    //인증 & 인가 담당
-
+    
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))    //설정 -> session 사용 x (로그인에 세션 안 써서)
@@ -37,6 +39,8 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                         //.anyRequest().hasRole("ADMIN")  //이외의 모든 요청은 ADMIN만 가능
                         .anyRequest().authenticated()   //이외의 요청은 로그인 해야만(authenticated()) 사용 가능
                 )
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) 
+                //기존 필터(UsernamePasswordAuthenticationFilter.class) 전에 jwtAuthenticationFilter 사용
                 .exceptionHandling(except -> {  //이 세팅 안하면 whitelabel에러만 나옴
                     except.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
                             .accessDeniedHandler(new JwtAccessDeniedHandler());

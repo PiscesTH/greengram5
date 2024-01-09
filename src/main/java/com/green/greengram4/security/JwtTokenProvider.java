@@ -97,7 +97,8 @@ public class JwtTokenProvider {
 
     public Authentication getAuthentication(String token) {     //Authentication 에 담을 때 사용 ?
         UserDetails userDetails = getUserDetailsFromToken(token);
-        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+        return userDetails == null ?
+                null : new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
     private UserDetails getUserDetailsFromToken(String token) {
