@@ -10,6 +10,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -20,7 +23,7 @@ import java.util.Date;
 @Component
 @RequiredArgsConstructor
 public class JwtTokenProvider {
-//    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
+    //    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
 //    private final String secret;    //암호화 할 때 사용하는 키 ?
 //    private final String headerSchemeName;
 //    private final String tokenType;
@@ -45,26 +48,68 @@ public class JwtTokenProvider {
 
     public String generateToken(MyPrincipal principal, long tokenValidMs) {
         return Jwts.builder()
-                .claims(createClaims(principal))
-                .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + tokenValidMs))
+                .claims(createClaims(principal))    //토큰에 담기는 정보
+                .issuedAt(new Date(System.currentTimeMillis()))     //발행시간 설정
+                .expiration(new Date(System.currentTimeMillis() + tokenValidMs))    //만료시간 설정
                 .signWith(this.key)
                 .compact();
     }
 
     private Claims createClaims(MyPrincipal principal) {    //Claims : key와 value 저장 가능
-        return Jwts.claims()
-                .add("iuser", principal.getIuser())
-                .build();
+        try {
+            String json = om.writeValueAsString(principal);
+            return Jwts.claims()
+                    .add("user", json)
+                    .build();
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public String resolveToken(HttpServletRequest req) {
         String auth = req.getHeader(appProperties.getJwt().getHeaderSchemeName());
-        if (auth == null) { return null; }
-        if (auth.startsWith(appProperties.getJwt().getTokenType())){
+        if (auth == null) {
+            return null;
+        }
+        if (auth.startsWith(appProperties.getJwt().getTokenType())) {
             return auth.substring(appProperties.getJwt().getTokenType().length()).trim();
         }
         return null;
 //        return auth == null ? null : auth.startsWith();
+    }
+
+    public boolean isValidateToken(String token) {
+        try {
+            return !getAllClaims(token).getExpiration().before(new Date());
+            //만료시간이 현재시간보다 전이면 false, 후면 true
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private Claims getAllClaims(String token) {
+        return Jwts.parser()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
+    public Authentication getAuthentication(String token) {     //Authentication 에 담을 때 사용 ?
+        UserDetails userDetails = getUserDetailsFromToken(token);
+        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+    }
+
+    private UserDetails getUserDetailsFromToken(String token) {
+        try {
+            Claims claims = getAllClaims(token);
+            String json = (String) claims.get("user");
+            MyPrincipal myPrincipal = om.readValue(json, MyPrincipal.class);
+            return MyUserDetails.builder()
+                    .myPrincipal(myPrincipal)
+                    .build();
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
