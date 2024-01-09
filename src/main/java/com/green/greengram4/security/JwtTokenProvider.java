@@ -42,7 +42,6 @@ public class JwtTokenProvider {
     @PostConstruct  //사용조건 : 빈등록 -> DI되고 나서 메서드 호출 하는 방법
     public void init() {
         byte[] keyBytes = Decoders.BASE64.decode(appProperties.getJwt().getSecret());
-        log.info("keyBytes : {}", keyBytes);
         this.key = Keys.hmacShaKeyFor(keyBytes);    //키 만드는 법
     }
 

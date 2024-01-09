@@ -14,8 +14,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 
 @Slf4j
-@RequiredArgsConstructor
 @Component
+@RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter { //서블릿 이전에 무조건 지나게 되는 필터
     //로그인 한 사용자와 로그인 안 한 사용자 구분 ?
 

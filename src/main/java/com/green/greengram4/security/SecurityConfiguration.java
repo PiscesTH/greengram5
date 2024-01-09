@@ -40,7 +40,7 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                         .anyRequest().authenticated()   //이외의 요청은 로그인 해야만(authenticated()) 사용 가능
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) 
-                //기존 필터(UsernamePasswordAuthenticationFilter.class) 전에 jwtAuthenticationFilter 사용
+                //기존 필터(UsernamePasswordAuthenticationFilter.class) 전에 해당 필터(jwtAuthenticationFilter) 사용
                 .exceptionHandling(except -> {  //이 세팅 안하면 whitelabel에러만 나옴
                     except.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
                             .accessDeniedHandler(new JwtAccessDeniedHandler());
