@@ -3,6 +3,7 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.*;
+import com.green.greengram4.security.AuthenticationFacade;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,10 @@ public class FeedService {
     private final FeedPicsMapper picsMapper;
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
+    private final AuthenticationFacade authenticationFacade;
 
     public ResVo postFeed(FeedInsDto dto) {
+        dto.setIuser(authenticationFacade.getLoginUserPk());
         FeedInsProcDto pDto1 = FeedInsProcDto.builder()
                 .iuser(dto.getIuser())
                 .contents(dto.getContents())
