@@ -32,6 +32,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter { //서블릿 
             if (auth != null) {
                 SecurityContextHolder.getContext().setAuthentication(auth); //사용자가 동시에 접속해도 다른 context 사용하게 됨.
                 //로그인 여부를 확인하는 방법 -> Authentication 에 값이 있는지 없는지 확인하여 판단. null이 아니면 로그인 된 걸로 처리하는 중.
+                //판단은 시큐리티가 함.
             }
         }
         filterChain.doFilter(request, response);    //다음 필터에 request와 resposne 전달
