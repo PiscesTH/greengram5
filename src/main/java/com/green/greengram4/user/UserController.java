@@ -2,7 +2,7 @@ package com.green.greengram4.user;
 
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.user.model.*;
-import io.swagger.v3.oas.annotations.*;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -24,10 +24,19 @@ public class UserController {
 
     @Operation(summary = "로그인", description = "result = 1: 로그인 성공 / 2: 아이디 없음 / 3: 비밀번호 틀림")
     @PostMapping("/signin")
-    public UserSigninVo postSignin(HttpServletRequest req,
-                                   HttpServletResponse res,
+    public UserSigninVo postSignin(HttpServletResponse res,
                                    @RequestBody UserSigninDto dto) {
-        return service.signin(req, res, dto);
+        return service.signin(res, dto);
+    }
+
+    @PostMapping("/signout")
+    public ResVo postSignout(HttpServletRequest req, HttpServletResponse res) {
+        return service.signout(res);
+    }
+
+    @GetMapping("/refresh-token")
+    public UserSigninVo getRefreshToken(HttpServletRequest req) {
+        return service.getRefreshToken(req);
     }
 
     @Operation(summary = "팔로우 처리")

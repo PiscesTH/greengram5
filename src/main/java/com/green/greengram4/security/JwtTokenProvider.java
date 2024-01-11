@@ -21,7 +21,7 @@ import java.util.Date;
 @Component
 @RequiredArgsConstructor
 public class JwtTokenProvider {
-//    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
+    //    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
 //    private final String secret;    //암호화 할 때 사용하는 키 ?
 //    private final String headerSchemeName;
 //    private final String tokenType;
@@ -39,7 +39,8 @@ public class JwtTokenProvider {
 
     @PostConstruct  //사용조건 : 빈등록 -> DI되고 나서 메서드 호출 하는 방법
     public void init() {
-        this.secretKeySpec = new SecretKeySpec(appProperties.getJwt().getSecret().getBytes(), SignatureAlgorithm.HS256.getJcaName());
+        this.secretKeySpec = new SecretKeySpec(appProperties.getJwt().getSecret().getBytes(),
+                                                SignatureAlgorithm.HS256.getJcaName());
     }
 
     private String generateToken(MyPrincipal principal, long tokenValidMs) {
@@ -51,11 +52,11 @@ public class JwtTokenProvider {
                 .compact();
     }
 
-    public String generateAccessToken(MyPrincipal principal){
+    public String generateAccessToken(MyPrincipal principal) {
         return generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
     }
 
-    public String generateRefreshToken(MyPrincipal principal){
+    public String generateRefreshToken(MyPrincipal principal) {
         return generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
     }
 
@@ -105,7 +106,7 @@ public class JwtTokenProvider {
                 null : new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
     }
 
-    private UserDetails getUserDetailsFromToken(String token) {
+    public UserDetails getUserDetailsFromToken(String token) {
         try {
             Claims claims = getAllClaims(token);
             String json = (String) claims.get("user");

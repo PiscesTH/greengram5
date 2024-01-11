@@ -24,6 +24,7 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                 .csrf(csrf -> csrf.disable())   //설정 -> 기본적으로 스프링이 제공해주는 보안 기법 사용 x     cos, csrf 검색 참고
                 .authorizeHttpRequests(author -> author.requestMatchers("/api/user/signin",    //requestMatchers() : 요청이 다음과 같으면
                                                                         "/api/user/signup",
+                                                                        "/api/user/refresh-token",
                                                                         "/error",
                                                                         "/err",
                                                                         "/",

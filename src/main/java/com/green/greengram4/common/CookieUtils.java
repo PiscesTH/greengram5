@@ -28,12 +28,9 @@ public class CookieUtils {
         response.addCookie(cookie); //response에 쿠키 담아서 응답하게 됨.
     }
 
-    public void deleteCookie(HttpServletRequest request, HttpServletResponse response, String name) {
-        Cookie cookie = getCookie(request, name);
-        if (cookie == null) {
-            return;
-        }
-        cookie.setValue(null);
+    public void deleteCookie(HttpServletResponse response, String name) {
+        Cookie cookie = new Cookie(name, null);
+        cookie.setPath("/");
         cookie.setMaxAge(0);
         response.addCookie(cookie);
     }

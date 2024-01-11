@@ -6,7 +6,10 @@ import com.green.greengram4.common.CookieUtils;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
+import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.user.model.*;
+import io.jsonwebtoken.Claims;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -39,7 +42,7 @@ public class UserService {
         return new ResVo(pDto.getIuser());    //회원가입한 iuser pk 값 리턴
     }
 
-    public UserSigninVo signin(HttpServletRequest req, HttpServletResponse res, UserSigninDto dto) {
+    public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
         UserSigninProcVo procVo = userMapper.selLoginInfoByUid(dto);
         if (procVo == null) {
             return UserSigninVo.builder()
@@ -55,7 +58,7 @@ public class UserService {
 
             //cookie에 rt 담는 작업
             int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
-            cookieUtils.deleteCookie(req, res, "rt");
+            cookieUtils.deleteCookie(res, "rt");
             cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
 
             return UserSigninVo.builder()
@@ -92,5 +95,37 @@ public class UserService {
 
     public ResVo patchUserPic(UserPicPatchDto dto) {
         return new ResVo(userMapper.updUserPic(dto));
+    }
+
+    public ResVo signout(HttpServletResponse res) {
+        cookieUtils.deleteCookie(res, "rt");
+        return new ResVo(Const.SUCCESS);
+    }
+
+    public UserSigninVo getRefreshToken(HttpServletRequest req) {
+        Cookie cookie = cookieUtils.getCookie(req, "rt");
+        if (cookie == null) {
+            return UserSigninVo.builder()
+                    .result(Const.FAIL)
+                    .accessToken(null)
+                    .build();
+        }
+        String token = cookie.getValue();
+        if (!jwtTokenProvider.isValidateToken(token)) {
+            return UserSigninVo.builder()
+                    .result(Const.FAIL)
+                    .accessToken(null)
+                    .build();
+        }
+
+        MyUserDetails myUserDetails = (MyUserDetails) jwtTokenProvider.getUserDetailsFromToken(token);
+        MyPrincipal myPrincipal = myUserDetails.getMyPrincipal();
+
+        String at = jwtTokenProvider.generateAccessToken(myPrincipal);
+
+        return UserSigninVo.builder()
+                .result(Const.SUCCESS)
+                .accessToken(at)
+                .build();
     }
 }
