@@ -12,11 +12,17 @@ public class AppProperties {    //yml에 작성한 property 값 가져오는 클
 
     @Getter
     @Setter
-    public class Jwt{
+    public class Jwt {
         private String secret;
         private String headerSchemeName;
         private String tokenType;
         private long accessTokenExpiry;
         private long refreshTokenExpiry;
+        private int refreshCookieMaxAge;
+
+        public void setRefreshTokenExpiry(long refreshTokenExpiry) {
+            this.refreshTokenExpiry = refreshTokenExpiry;
+            refreshCookieMaxAge = (int) refreshTokenExpiry / 1000;
+        }
     }
 }

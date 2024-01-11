@@ -3,6 +3,8 @@ package com.green.greengram4.user;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.user.model.*;
 import io.swagger.v3.oas.annotations.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -16,25 +18,27 @@ public class UserController {
 
     @Operation(summary = "회원가입", description = "회원가입용 정보")
     @PostMapping("/signup")
-    public ResVo postSignup(@RequestBody UserSignupDto dto){
+    public ResVo postSignup(@RequestBody UserSignupDto dto) {
         return service.signup(dto);
     }
 
     @Operation(summary = "로그인", description = "result = 1: 로그인 성공 / 2: 아이디 없음 / 3: 비밀번호 틀림")
     @PostMapping("/signin")
-    public UserSigninVo postSignin(@RequestBody UserSigninDto dto){
-        return service.signin(dto);
+    public UserSigninVo postSignin(HttpServletRequest req,
+                                   HttpServletResponse res,
+                                   @RequestBody UserSigninDto dto) {
+        return service.signin(req, res, dto);
     }
 
     @Operation(summary = "팔로우 처리")
     @PostMapping("/follow")
-    public ResVo toggleFollow(@RequestBody UserFollowDto dto){
+    public ResVo toggleFollow(@RequestBody UserFollowDto dto) {
         return service.toggleFollow(dto);
     }
 
     @Operation(summary = "유저 프로필 정보")
     @GetMapping
-    public UserInfoVo getUserInfo(UserInfoSelDto dto){
+    public UserInfoVo getUserInfo(UserInfoSelDto dto) {
         return service.getUserInfo(dto);
     }
 

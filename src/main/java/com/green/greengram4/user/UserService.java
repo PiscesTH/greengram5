@@ -2,10 +2,13 @@ package com.green.greengram4.user;
 
 import com.green.greengram4.common.AppProperties;
 import com.green.greengram4.common.Const;
+import com.green.greengram4.common.CookieUtils;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.user.model.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -20,7 +23,8 @@ public class UserService {
     private final UserFollowMapper followMapper;
     private final PasswordEncoder passwordEncoder;  //SecurityConfiguration 에서 빈등록 하고있음.
     private final JwtTokenProvider jwtTokenProvider;
-//    private final AppProperties appProperties;
+    private final AppProperties appProperties;
+    private final CookieUtils cookieUtils;
 
     public ResVo signup(UserSignupDto dto) {
 //        String hasedUpw = BCrypt.hashpw(dto.getUpw(), BCrypt.gensalt());
@@ -35,7 +39,7 @@ public class UserService {
         return new ResVo(pDto.getIuser());    //회원가입한 iuser pk 값 리턴
     }
 
-    public UserSigninVo signin(UserSigninDto dto) {
+    public UserSigninVo signin(HttpServletRequest req, HttpServletResponse res, UserSigninDto dto) {
         UserSigninProcVo procVo = userMapper.selLoginInfoByUid(dto);
         if (procVo == null) {
             return UserSigninVo.builder()
@@ -48,6 +52,11 @@ public class UserService {
 //            String rt = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
             String at = jwtTokenProvider.generateAccessToken(principal);
             String rt = jwtTokenProvider.generateRefreshToken(principal);
+
+            //cookie에 rt 담는 작업
+            int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
+            cookieUtils.deleteCookie(req, res, "rt");
+            cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
 
             return UserSigninVo.builder()
                     .iuser(procVo.getIuser())
@@ -73,7 +82,7 @@ public class UserService {
         }
     }
 
-    public UserInfoVo getUserInfo(UserInfoSelDto dto){
+    public UserInfoVo getUserInfo(UserInfoSelDto dto) {
         return userMapper.selUserInfo(dto);
     }
 
