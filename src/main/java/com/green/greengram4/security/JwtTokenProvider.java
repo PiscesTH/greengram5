@@ -4,32 +4,30 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.greengram4.common.AppProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.security.Key;
+import javax.crypto.spec.SecretKeySpec;
 import java.util.Date;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class JwtTokenProvider {
-    //    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
+//    @Value("${springboot.jwt.secret}")    생성자 이용 안할 때. final 없어야 함
 //    private final String secret;    //암호화 할 때 사용하는 키 ?
 //    private final String headerSchemeName;
 //    private final String tokenType;
+    private final AppProperties appProperties;  //위 내용 객체로 처리
     private final ObjectMapper om;
-    private final AppProperties appProperties;  //객체로 처리
-    private Key key;
+    private SecretKeySpec secretKeySpec;
 
 /*    public JwtTokenProvider(@Value("${springboot.jwt.secret}") String secret,
                             @Value("${springboot.jwt.header-scheme-name}") String headerSchemeName,
@@ -41,8 +39,7 @@ public class JwtTokenProvider {
 
     @PostConstruct  //사용조건 : 빈등록 -> DI되고 나서 메서드 호출 하는 방법
     public void init() {
-        byte[] keyBytes = Decoders.BASE64.decode(appProperties.getJwt().getSecret());
-        this.key = Keys.hmacShaKeyFor(keyBytes);    //키 만드는 법
+        this.secretKeySpec = new SecretKeySpec(appProperties.getJwt().getSecret().getBytes(), SignatureAlgorithm.HS256.getJcaName());
     }
 
     private String generateToken(MyPrincipal principal, long tokenValidMs) {
@@ -50,7 +47,7 @@ public class JwtTokenProvider {
                 .claims(createClaims(principal))    //토큰에 담기는 정보
                 .issuedAt(new Date(System.currentTimeMillis()))     //발행시간 설정
                 .expiration(new Date(System.currentTimeMillis() + tokenValidMs))    //만료시간 설정
-                .signWith(this.key)
+                .signWith(this.secretKeySpec)
                 .compact();
     }
 
@@ -62,7 +59,7 @@ public class JwtTokenProvider {
         return generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
     }
 
-    private Claims createClaims(MyPrincipal principal) {    //Claims : key와 value 저장 가능
+    private Claims createClaims(MyPrincipal principal) {
         try {
             String json = om.writeValueAsString(principal);
             return Jwts.claims()
@@ -71,6 +68,15 @@ public class JwtTokenProvider {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    private Claims getAllClaims(String token) { //Claims : key와 value 저장 가능
+        return Jwts
+                .parser()
+                .verifyWith(secretKeySpec)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
     }
 
     public String resolveToken(HttpServletRequest req) {
@@ -82,7 +88,6 @@ public class JwtTokenProvider {
             return auth.substring(appProperties.getJwt().getTokenType().length()).trim();
         }
         return null;
-//        return auth == null ? null : auth.startsWith();
     }
 
     public boolean isValidateToken(String token) {
@@ -92,14 +97,6 @@ public class JwtTokenProvider {
         } catch (Exception e) {
             return false;
         }
-    }
-
-    private Claims getAllClaims(String token) {
-        return Jwts.parser()
-                .setSigningKey(key)
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
     }
 
     public Authentication getAuthentication(String token) {     //Authentication 에 담을 UsernamePasswordAuthenticationToken 값 얻을 때 사용

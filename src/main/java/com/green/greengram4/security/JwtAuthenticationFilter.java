@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter { //서블릿 
 
         if (token != null && jwtTokenProvider.isValidateToken(token)){
             Authentication auth = jwtTokenProvider.getAuthentication(token);
+//            UsernamePasswordAuthenticationToken auth = (UsernamePasswordAuthenticationToken) jwtTokenProvider.getAuthentication(token);
             if (auth != null) {
                 SecurityContextHolder.getContext().setAuthentication(auth); //사용자가 동시에 접속해도 다른 context 사용하게 됨.
                 //로그인 여부를 확인하는 방법 -> Authentication 에 값이 있는지 없는지 확인하여 판단. null이 아니면 로그인 된 걸로 처리하는 중.

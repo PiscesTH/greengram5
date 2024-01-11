@@ -28,6 +28,7 @@ public class MyUserDetails implements UserDetails { //요청이 왔을 때 authe
         return null;
     }
 
+    //아래 메서드들은 로그인 커스텀 처리하면(시큐리티 루틴 안 탈때) 사용 안되는 메서드들.
     @Override
     public boolean isAccountNonExpired() {
         return true;
