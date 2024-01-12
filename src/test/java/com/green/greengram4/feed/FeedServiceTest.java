@@ -39,7 +39,7 @@ class FeedServiceTest {
         when(picsMapper.insPic(any())).thenReturn(3);   //any() : 파라미터로 어떠한 값이 와도
 
         FeedInsDto dto = new FeedInsDto();
-        ResVo vo = service.postFeed(dto);
+//        ResVo vo = service.postFeed(dto);
 
         verify(feedMapper).insFeed(any());  //해당 객체의 메서드 실제로 호출했는지 확인
         verify(picsMapper).insPic(any());   //두번 호출하고 확인하면 에러 발생함

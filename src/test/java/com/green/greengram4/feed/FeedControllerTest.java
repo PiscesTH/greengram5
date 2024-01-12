@@ -42,7 +42,7 @@ class FeedControllerTest {
     void postFeed() throws Exception {
         ResVo result = new ResVo(2);
         //when(service.postFeed(any())).thenReturn(result);
-        given(service.postFeed(any())).willReturn(result);  //when과 같은 효과
+        given(service.postFeed(any(), any())).willReturn(result);  //when과 같은 효과
         //given - when - then
         //given : 세팅 / when : 실행 / then : 검증
         FeedInsDto dto = new FeedInsDto();
@@ -58,7 +58,7 @@ class FeedControllerTest {
                 .andExpect(content().string(mapper.writeValueAsString(result))) //기대한 결과값인지 확인하는 메서드
                 .andDo(print());    //통신에 결과 출력 ?
 
-        verify(service).postFeed(any());
+        verify(service).postFeed(any(), any());
     }
 
     @Test

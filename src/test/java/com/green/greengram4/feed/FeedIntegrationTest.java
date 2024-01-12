@@ -28,7 +28,7 @@ public class FeedIntegrationTest extends BaseIntegrationTest {
         List<String> pics = new ArrayList<>();
         pics.add("https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         pics.add("https://images.unsplash.com/photo-1704024213027-c3555991bc63?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        dto.setPics(pics);
+//        dto.setPics(pics);
 
         String json = om.writeValueAsString(dto);   //dto객체를 json 형태의 스트링 값으로 변경
         MvcResult mr = mvc.perform(        //restAPI 테스트 환경을 만들어주는 역할

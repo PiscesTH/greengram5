@@ -24,8 +24,8 @@ class FeedPicsMapperTest {
                 .ifeed(115)
                 .pics(new ArrayList<>())
                 .build();
-        dto.getPics().add("사진 테스트");
-        dto.getPics().add("사진 테스트22");
+//        dto.getPics().add("사진 테스트");
+//        dto.getPics().add("사진 테스트22");
         List<Integer> ifeeds = new ArrayList<>();
         ifeeds.add(dto.getIfeed());
         List<FeedSelPicVo> beforeList = picsMapper.selPicsByIfeeds(ifeeds);

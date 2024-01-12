@@ -7,6 +7,7 @@ import com.green.greengram4.security.AuthenticationFacade;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +23,7 @@ public class FeedService {
     private final FeedCommentMapper commentMapper;
     private final AuthenticationFacade authenticationFacade;
 
-    public ResVo postFeed(FeedInsDto dto) {
+    public ResVo postFeed(List<MultipartFile> pics, FeedInsDto dto) {
         dto.setIuser(authenticationFacade.getLoginUserPk());
         FeedInsProcDto pDto1 = FeedInsProcDto.builder()
                 .iuser(dto.getIuser())
@@ -33,7 +34,7 @@ public class FeedService {
         log.info("feedResult : {}", feedResult);
         FeedInsPicDto pDto2 = FeedInsPicDto.builder()
                 .ifeed(pDto1.getIfeed())
-                .pics(dto.getPics())
+                .pics(pics)
                 .build();
         int picsResult = picsMapper.insPic(pDto2);
         log.info("picsResult : {}", picsResult);

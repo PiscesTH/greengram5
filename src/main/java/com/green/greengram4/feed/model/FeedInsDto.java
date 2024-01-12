@@ -11,5 +11,4 @@ public class FeedInsDto {
     private int iuser;
     private String contents;
     private String location;
-    private List<String> pics;
 }

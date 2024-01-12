@@ -2,6 +2,7 @@ package com.green.greengram4.feed.model;
 
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
 @Builder
 public class FeedInsPicDto {
     private int ifeed;
-    private List<String> pics;
+    private List<MultipartFile> pics;
 }
