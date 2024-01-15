@@ -1,6 +1,7 @@
 package com.green.greengram4.feed;
 
 import com.green.greengram4.common.Const;
+import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.*;
 import com.green.greengram4.security.AuthenticationFacade;
@@ -9,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,7 @@ public class FeedService {
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
     private final AuthenticationFacade authenticationFacade;
+    private final MyFileUtils myFileUtils;
 
     public ResVo postFeed(List<MultipartFile> pics, FeedInsDto dto) {
         dto.setIuser(authenticationFacade.getLoginUserPk());
@@ -31,13 +34,19 @@ public class FeedService {
                 .location(dto.getLocation())
                 .build();
         int feedResult = feedMapper.insFeed(pDto1);
-        log.info("feedResult : {}", feedResult);
+
+        String target = "/feed/" + pDto1.getIfeed();
+        List<String> savedPics = new ArrayList<>();
+        for (MultipartFile file : pics) {
+            String saveFileNm = myFileUtils.transferTo(file, target);
+            savedPics.add(saveFileNm);
+        }
+
         FeedInsPicDto pDto2 = FeedInsPicDto.builder()
                 .ifeed(pDto1.getIfeed())
-                .pics(pics)
+                .pics(savedPics)
                 .build();
         int picsResult = picsMapper.insPic(pDto2);
-        log.info("picsResult : {}", picsResult);
 
         return new ResVo(pDto1.getIfeed());
     }

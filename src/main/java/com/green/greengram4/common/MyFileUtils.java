@@ -22,7 +22,9 @@ public class MyFileUtils {
     public String makeFolders(String path) {
         File folder = new File(uploadPrefixPath, path);
         folder.mkdirs();    //make directory >> s 유/무 차이 -> 폴더 여러 개/한 개 만들기
-        return folder.getAbsolutePath();    //절대 주소 ?
+        return folder.getAbsolutePath();    //절대 주소 : OS에서 파일을 열기 위해 들어가는 모든 경로
+        //상대 주소 : 시작점(ex : D:/home/download)부터 파일을 열기 위해 들어가는 경로
+        //  ../ : 상위 폴더로 이동   / : 현재 폴더에서부터
     }
 
     //UUID : 범용 고유 식별자
@@ -46,4 +48,18 @@ public class MyFileUtils {
         return getRandomFileNm(fileNm);
     }
 
+    //메모리에 있는 내용 -> 파일로 옮기는 메서드
+    public String transferTo(MultipartFile mf, String target) {
+        String fileNm = getRandomFileNm(mf);
+        String folderPath = makeFolders(target);
+        File saveFile = new File(folderPath, fileNm);
+        try {
+            mf.transferTo(saveFile);    //메모리에 있는 내용 -> 실제로 파일로 옮기는 메서드. 경로는 File 객체로 보내준다.
+            return fileNm;      //DB에 저장할 랜덤한 파일명 리턴.
+            //DB에 저장하는 예시 -> /{category (ex)user}/(user)pk/파일명
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

@@ -24,6 +24,5 @@ import org.springframework.context.annotation.Configuration;
         scheme = "Bearer"   //Bearer dgasdf~ 형식으로
 )
 public class SwaggerConfiguration {
-
-
+    
 }

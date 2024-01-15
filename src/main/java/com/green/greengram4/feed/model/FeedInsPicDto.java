@@ -10,5 +10,5 @@ import java.util.List;
 @Builder
 public class FeedInsPicDto {
     private int ifeed;
-    private List<MultipartFile> pics;
+    private List<String> pics;
 }

@@ -1,16 +1,21 @@
 package com.green.greengram4.common;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Slf4j
 @ExtendWith(SpringExtension.class)
 @Import({MyFileUtils.class})
 @TestPropertySource(properties = {  //yaml은 객체화 안 돼서 값 설정해주는 작업 필요
@@ -32,10 +37,11 @@ class MyFileUtilsTest {
         assertTrue(newFolder.exists());
         assertEquals(preFolder.getAbsolutePath(), newFolder.getAbsolutePath());
     }
+
     @Test
     void getRandomFileNmTest() {
         String fileNm = myFileUtils.getRandomFileNm();
-        System.out.println("fileNm : " +fileNm);
+        System.out.println("fileNm : " + fileNm);
         assertNotNull(fileNm);
     }
 
@@ -49,6 +55,7 @@ class MyFileUtilsTest {
         String ext2 = myFileUtils.getExt(fileNm2);
         assertEquals(".pngs", ext2);
     }
+
     @Test
     public void getRandomFileNm2() {
         String fileNm1 = "hello.T.jpg";
@@ -58,5 +65,16 @@ class MyFileUtilsTest {
         String fileNm2 = "bye.Y.jpeg";
         String rFileNm2 = myFileUtils.getRandomFileNm(fileNm2);
         System.out.println("rFileNm2 : " + rFileNm2);
+    }
+
+    @Test
+    public void transferToTest() throws Exception {
+        String fileNm = "alex-hu-79U4ZL9QwCE-unsplash.jpg";
+        String filePath = "C:/Users/Administrator/Downloads/" + fileNm;
+        FileInputStream fis = new FileInputStream(filePath);
+        MultipartFile mf = new MockMultipartFile("pic", fileNm, "jpg", fis);
+
+        String saveFileNm = myFileUtils.transferTo(mf, "/feed/12");
+        log.info("saveFileNm : {}", saveFileNm);
     }
 }
