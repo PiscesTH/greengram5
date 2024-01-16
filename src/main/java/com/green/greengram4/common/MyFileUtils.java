@@ -56,9 +56,23 @@ public class MyFileUtils {
             mf.transferTo(saveFile);    //메모리에 있는 내용 -> 실제로 파일로 옮기는 메서드. 경로는 File 객체로 보내준다.
             return fileNm;      //DB에 저장할 랜덤한 파일명 리턴.
             //DB에 저장하는 예시 -> /{category (ex)user}/(user)pk/파일명
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public void delFiles(String folderPath) {   //파라미터 경로 폴더 아래의 폴더 및 파일 삭제. 풀 경로 보내줘야함
+        File folder = new File(uploadPrefixPath, folderPath);
+        if (folder.exists()) {
+            File[] files = folder.listFiles();
+
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    delFiles(file.getAbsolutePath());
+                }
+                file.delete();
+            }
         }
     }
 }

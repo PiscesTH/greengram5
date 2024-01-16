@@ -42,7 +42,7 @@ class FeedControllerTest {
     void postFeed() throws Exception {
         ResVo result = new ResVo(2);
         //when(service.postFeed(any())).thenReturn(result);
-        given(service.postFeed(any(), any())).willReturn(result);  //when과 같은 효과
+//        given(service.postFeed(any(), any())).willReturn(result);  //when과 같은 효과
         //given - when - then
         //given : 세팅 / when : 실행 / then : 검증
         FeedInsDto dto = new FeedInsDto();

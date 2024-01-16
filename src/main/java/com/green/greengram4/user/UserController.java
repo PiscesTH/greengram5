@@ -58,7 +58,7 @@ public class UserController {
     }
 
     @PatchMapping("/pic")
-    public ResVo patchUserPic(@RequestPart MultipartFile pic) {
+    public UserPicPatchDto patchUserPic(@RequestPart MultipartFile pic) {
         return service.patchUserPic(pic);
     }
 }

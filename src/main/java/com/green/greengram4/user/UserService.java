@@ -1,9 +1,6 @@
 package com.green.greengram4.user;
 
-import com.green.greengram4.common.AppProperties;
-import com.green.greengram4.common.Const;
-import com.green.greengram4.common.CookieUtils;
-import com.green.greengram4.common.ResVo;
+import com.green.greengram4.common.*;
 import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
@@ -31,6 +28,7 @@ public class UserService {
     private final AppProperties appProperties;
     private final CookieUtils cookieUtils;
     private final AuthenticationFacade authenticationFacade;
+    private final MyFileUtils myFileUtils;
 
     public ResVo signup(UserSignupDto dto) {
 //        String hasedUpw = BCrypt.hashpw(dto.getUpw(), BCrypt.gensalt());
@@ -96,14 +94,20 @@ public class UserService {
         return new ResVo(userMapper.updUserFirebaseToken(dto));
     }
 
-    public ResVo patchUserPic(MultipartFile pic) {
+    public UserPicPatchDto patchUserPic(MultipartFile pic) {
+        int iuser = authenticationFacade.getLoginUserPk();
+        String target = "/user/" + iuser;
+        String saveFileNm = myFileUtils.transferTo(pic, target);
+        myFileUtils.delFiles(target);
         UserPicPatchDto dto = UserPicPatchDto.builder()
-                .iuser(authenticationFacade.getLoginUserPk())
-                .pic(pic)
+                .iuser(iuser)
+                .pic(saveFileNm)
                 .build();
-        log.info("pic : {}",pic);
+
+        log.info("pic : {}",saveFileNm);
         log.info("iuser : {}",dto.getIuser());
-        return new ResVo(userMapper.updUserPic(dto));
+        int result = userMapper.updUserPic(dto);
+        return dto;
     }
 
     public ResVo signout(HttpServletResponse res) {

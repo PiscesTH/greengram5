@@ -28,6 +28,8 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                                                                         "/error",
                                                                         "/err",
                                                                         "/",
+                                                                        "/profile",
+                                                                        "/profile/**",
                                                                         "/pic/**",
                                                                         "/feed",
                                                                         "/feed/**",
