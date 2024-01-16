@@ -4,6 +4,7 @@ import com.green.greengram4.common.AppProperties;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.CookieUtils;
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.security.MyUserDetails;
@@ -17,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
 @Service
@@ -28,6 +30,7 @@ public class UserService {
     private final JwtTokenProvider jwtTokenProvider;
     private final AppProperties appProperties;
     private final CookieUtils cookieUtils;
+    private final AuthenticationFacade authenticationFacade;
 
     public ResVo signup(UserSignupDto dto) {
 //        String hasedUpw = BCrypt.hashpw(dto.getUpw(), BCrypt.gensalt());
@@ -93,7 +96,13 @@ public class UserService {
         return new ResVo(userMapper.updUserFirebaseToken(dto));
     }
 
-    public ResVo patchUserPic(UserPicPatchDto dto) {
+    public ResVo patchUserPic(MultipartFile pic) {
+        UserPicPatchDto dto = UserPicPatchDto.builder()
+                .iuser(authenticationFacade.getLoginUserPk())
+                .pic(pic)
+                .build();
+        log.info("pic : {}",pic);
+        log.info("iuser : {}",dto.getIuser());
         return new ResVo(userMapper.updUserPic(dto));
     }
 

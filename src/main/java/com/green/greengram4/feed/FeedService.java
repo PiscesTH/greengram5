@@ -26,7 +26,7 @@ public class FeedService {
     private final AuthenticationFacade authenticationFacade;
     private final MyFileUtils myFileUtils;
 
-    public ResVo postFeed(List<MultipartFile> pics, FeedInsDto dto) {
+    public FeedInsPicDto postFeed(List<MultipartFile> pics, FeedInsDto dto) {
         dto.setIuser(authenticationFacade.getLoginUserPk());
         FeedInsProcDto pDto1 = FeedInsProcDto.builder()
                 .iuser(dto.getIuser())
@@ -48,7 +48,7 @@ public class FeedService {
                 .build();
         int picsResult = picsMapper.insPic(pDto2);
 
-        return new ResVo(pDto1.getIfeed());
+        return pDto2;
     }
 
     public List<FeedSelVo> getAllFeed(FeedSelDto dto) {

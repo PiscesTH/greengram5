@@ -28,6 +28,11 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                                                                         "/error",
                                                                         "/err",
                                                                         "/",
+                                                                        "/pic/**",
+                                                                        "/feed",
+                                                                        "/feed/**",
+                                                                        "/fimg/**",
+                                                                        "/css/**",
                                                                         "/index.html",
                                                                         "/static/**",
                                                                         "/swagger.html",    //스웨거 사용을 위한 설정 3줄
