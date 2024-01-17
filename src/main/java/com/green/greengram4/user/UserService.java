@@ -6,13 +6,11 @@ import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.user.model.*;
-import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -96,9 +94,9 @@ public class UserService {
 
     public UserPicPatchDto patchUserPic(MultipartFile pic) {
         int iuser = authenticationFacade.getLoginUserPk();
-        String target = "/user/" + iuser;
+        String target = "user/" + iuser;
+        myFileUtils.delFolderTrigger(target);
         String saveFileNm = myFileUtils.transferTo(pic, target);
-        myFileUtils.delFiles(target);
         UserPicPatchDto dto = UserPicPatchDto.builder()
                 .iuser(iuser)
                 .pic(saveFileNm)
