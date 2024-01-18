@@ -1,6 +1,8 @@
 package com.green.greengram4.user;
 
 import com.green.greengram4.common.*;
+import com.green.greengram4.exception.AuthErrorCode;
+import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
@@ -44,31 +46,30 @@ public class UserService {
     public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
         UserSigninProcVo procVo = userMapper.selLoginInfoByUid(dto);
         if (procVo == null) {
-            return UserSigninVo.builder()
-                    .result(Const.LOGIN_NO_UID)
-                    .build();
+            throw new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID);    //런타임 예외는 throws 없어도 가능 한 듯 ?
         }
-        if (passwordEncoder.matches(dto.getUpw(), procVo.getUpw())) {
-            MyPrincipal principal = new MyPrincipal(procVo.getIuser());
+        if (!passwordEncoder.matches(dto.getUpw(), procVo.getUpw())) {
+            throw new RestApiException(AuthErrorCode.INVALID_PASSWORD);
+        }
+        MyPrincipal principal = new MyPrincipal(procVo.getIuser());
 //            String at = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
 //            String rt = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
-            String at = jwtTokenProvider.generateAccessToken(principal);
-            String rt = jwtTokenProvider.generateRefreshToken(principal);
+        String at = jwtTokenProvider.generateAccessToken(principal);
+        String rt = jwtTokenProvider.generateRefreshToken(principal);
 
-            //cookie에 rt 담는 작업
-            int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
-            cookieUtils.deleteCookie(res, "rt");
-            cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
+        //cookie에 rt 담는 작업
+        int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
+        cookieUtils.deleteCookie(res, "rt");
+        cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
 
-            return UserSigninVo.builder()
-                    .iuser(procVo.getIuser())
-                    .nm(procVo.getNm())
-                    .pic(procVo.getPic())
-                    .result(Const.LOGIN_SUCCESS)
-                    .accessToken(at)
-                    .build();
-        }
-        return UserSigninVo.builder().result(Const.LOGIN_DIFF_UPW).build();
+        return UserSigninVo.builder()
+                .iuser(procVo.getIuser())
+                .nm(procVo.getNm())
+                .pic(procVo.getPic())
+                .result(Const.LOGIN_SUCCESS)
+                .accessToken(at)
+                .build();
+
     }
 
     public ResVo toggleFollow(UserFollowDto dto) {
@@ -102,8 +103,8 @@ public class UserService {
                 .pic(saveFileNm)
                 .build();
 
-        log.info("pic : {}",saveFileNm);
-        log.info("iuser : {}",dto.getIuser());
+        log.info("pic : {}", saveFileNm);
+        log.info("iuser : {}", dto.getIuser());
         int result = userMapper.updUserPic(dto);
         return dto;
     }

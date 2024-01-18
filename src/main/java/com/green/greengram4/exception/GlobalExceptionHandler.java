@@ -9,6 +9,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<Object> handleIIllegalArgumentException(IllegalArgumentException e) {
         log.warn("handleIIllegalArgument", e);
@@ -16,9 +17,9 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> handelException(Exception e) {
-        log.warn("handelException", e);
-        return handleExceptionInternal(CommonErrorCode.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<Object> handleException(Exception e) {
+        log.warn("handleException", e);
+        return handleExceptionInternal(CommonErrorCode.INTERNAL_SERVER_ERROR);  //
     }
 
     @ExceptionHandler(RestApiException.class)
