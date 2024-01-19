@@ -21,8 +21,8 @@ public class FeedController {
 
     @Operation(summary = "피드 등록")
     @PostMapping
-    public FeedInsPicDto postFeed(@RequestPart List<MultipartFile> pics,@RequestPart FeedInsDto dto) {
-        log.info("pics : {}", pics);    //사진 기본용량 1mb
+    public FeedInsPicDto postFeed(@RequestPart(required = false) List<MultipartFile> pics,@RequestPart FeedInsDto dto) {
+//        log.info("pics : {}", pics);    //사진 기본용량 1mb
         log.info("dto : {}", dto);
         return service.postFeed(pics, dto);
     }

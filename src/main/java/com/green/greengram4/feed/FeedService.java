@@ -3,6 +3,8 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.exception.FeedErrorCode;
+import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.feed.model.*;
 import com.green.greengram4.security.AuthenticationFacade;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +29,9 @@ public class FeedService {
     private final MyFileUtils myFileUtils;
 
     public FeedInsPicDto postFeed(List<MultipartFile> pics, FeedInsDto dto) {
+        if (pics == null) {
+            throw new RestApiException(FeedErrorCode.PICS_MORE_THEN_ONE);
+        }
         dto.setIuser(authenticationFacade.getLoginUserPk());
         FeedInsProcDto pDto1 = FeedInsProcDto.builder()
                 .iuser(dto.getIuser())
@@ -95,12 +100,8 @@ public class FeedService {
     }
 
     public ResVo delFeed(FeedDelDto dto) {
-        try {
             int delProcResult = feedMapper.delFeedProc(dto);
             int delResult = feedMapper.delFeed(dto);
             return new ResVo(delResult);
-        } catch (Exception e) {
-            return new ResVo(0);
-        }
     }
 }

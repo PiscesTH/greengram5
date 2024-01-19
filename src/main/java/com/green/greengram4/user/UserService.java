@@ -11,6 +11,7 @@ import com.green.greengram4.user.model.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -61,6 +62,8 @@ public class UserService {
         int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
         cookieUtils.deleteCookie(res, "rt");
         cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
+
+//        HttpSession session = req.getSession(true);
 
         return UserSigninVo.builder()
                 .iuser(procVo.getIuser())
