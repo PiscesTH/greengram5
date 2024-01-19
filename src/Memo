@@ -1,0 +1,10 @@
+@ControllerAdvice와 ResponseEntityExceptionHandler 모두 에러 핸들링 할 수 있습니다. 다만, ResponseEntityExceptionHandler를 구현하고,
+@ControllerAdvice를 달아주게되면 Spring MVC 애플리케이션에서 발생하는 전반적인 예외(Global)를 처리할 수 있습니다.
+ResponseEntityExceptionHandler 클래스의 이름에서 알 수 있듯이 HTTP request에 관련된 예외를 처리할 수 있는 메소드들을 제공하고 있으며,
+아래 URL을 참조하시면 보다 많은 메소드를 확인할 수 있습니다.
+
+@ControllerAdvice, @RestControllerAdvice만을 사용할 경우 Spring MVC Exception을 모두 처리하지 못할 수 있습니다.
+이 경우 사실상 하나의 클래스에서 전역적인 예외 처리가 불가능합니다.
+모든 Spring MVC Exception을 수작업으로 처리할 수도 있지만, 매우 번거롭습니다.
+ResponseEntityExceptionHandler를 확장하면 Spring MVC Exception에 대한 최소한의 예외 처리가 가능합니다.
+필요한 경우 오버라이딩을 통해 예외 처리 관련 메소드를 커스터마이징 할 수 있습니다.

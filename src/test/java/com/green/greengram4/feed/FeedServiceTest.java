@@ -20,7 +20,8 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)  //스프링 객체화. 테스트에 실행할 클래서 지정. 필요한 것만 빈등록
 @Import({FeedService.class})        //서비스만 빈 등록. 
-class FeedServiceTest {
+class
+FeedServiceTest {
     @MockBean   //가상의 객체(가짜)의 주소값 할당
     private FeedMapper feedMapper;
     @MockBean   //서비스가 DI받는 것들 다 @MockBean으로 가상 주소값 받아와야 테스트 가능
