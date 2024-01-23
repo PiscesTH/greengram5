@@ -30,7 +30,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {  //새로고침 �
         //기본은 요청 오면 controller(RestAPI) -> FE(static) 순서로 확인
         registry
                 .addResourceHandler("/**")
-                .addResourceLocations("classpath:/static/**")
+                .addResourceLocations("classpath:/static/**")   //classpath -> resources 를 의미함
                 .resourceChain(true)
                 .addResolver(new PathResourceResolver() {
                     @Override

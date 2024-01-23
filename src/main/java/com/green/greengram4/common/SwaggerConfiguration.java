@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
         type = SecuritySchemeType.HTTP,
         name = "authorization",     //키값
         in = SecuritySchemeIn.HEADER,   //헤더에
-        bearerFormat = "JWT",
+        bearerFormat = "JWT",   //생략해도 문제는 없음
         scheme = "Bearer"   //Bearer dgasdf~ 형식으로
 )
 public class SwaggerConfiguration {
