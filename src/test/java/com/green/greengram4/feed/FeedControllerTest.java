@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.greengram4.CharEncodingConfig;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.FeedInsDto;
+import com.green.greengram4.feed.model.FeedInsPicDto;
 import com.green.greengram4.feed.model.FeedSelVo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,9 +41,11 @@ class FeedControllerTest {
 
     @Test
     void postFeed() throws Exception {
-        ResVo result = new ResVo(2);
-        //when(service.postFeed(any())).thenReturn(result);
-//        given(service.postFeed(any(), any())).willReturn(result);  //when과 같은 효과
+        FeedInsPicDto result = FeedInsPicDto.builder()
+                .ifeed(1)
+                .build();
+//        when(service.postFeed(any())).thenReturn(result);
+        given(service.postFeed(any(), any())).willReturn(result);  //when과 같은 효과
         //given - when - then
         //given : 세팅 / when : 실행 / then : 검증
         FeedInsDto dto = new FeedInsDto();
