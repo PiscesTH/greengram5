@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Getter
 @ConfigurationProperties(prefix = "openapi")
-public class OprenApiProperties {
+public class OpenApiProperties {
 
     private final Apartment apartment = new Apartment();
 
