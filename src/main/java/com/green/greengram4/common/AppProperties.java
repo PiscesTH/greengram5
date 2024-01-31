@@ -12,7 +12,7 @@ public class AppProperties {    //yml에 작성한 property 값 가져오는 클
 
     @Getter
     @Setter
-    public class Jwt {
+    public static class Jwt {
         private String secret;
         private String headerSchemeName;
         private String tokenType;
