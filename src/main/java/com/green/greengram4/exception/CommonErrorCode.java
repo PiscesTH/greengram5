@@ -4,6 +4,11 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+import java.util.Collections;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 @Getter
 @RequiredArgsConstructor
 public enum CommonErrorCode implements ErrorCode{
@@ -14,4 +19,10 @@ public enum CommonErrorCode implements ErrorCode{
     private final HttpStatus httpStatus;
     private final String message;
 
+    private static final Map<String, String> CODE_MAP = Collections.unmodifiableMap(
+            Stream.of(values()).collect(Collectors.toMap(CommonErrorCode::name, CommonErrorCode::getMessage)));
+
+    public static CommonErrorCode of(final String code) {
+        return CommonErrorCode.valueOf(CODE_MAP.get(code));
+    }
 }
