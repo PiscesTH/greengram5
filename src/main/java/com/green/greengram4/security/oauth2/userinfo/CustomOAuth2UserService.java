@@ -67,7 +67,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         UserSigninProcVo vo = new UserSigninProcVo();
         vo.setIuser(dto.getIuser());
-        vo.set
+
         return null;
     }
 }
