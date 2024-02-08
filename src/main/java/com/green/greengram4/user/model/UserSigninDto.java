@@ -14,4 +14,5 @@ public class UserSigninDto {
     private String upw;
     @JsonIgnore
     private int iuser;
+    private String providerType;
 }

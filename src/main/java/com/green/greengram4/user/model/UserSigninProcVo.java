@@ -9,4 +9,5 @@ public class UserSigninProcVo {
     private String pic;
     private String upw;
     private String role;
+    private String providerType;
 }

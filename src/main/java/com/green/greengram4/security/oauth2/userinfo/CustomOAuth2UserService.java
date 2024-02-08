@@ -2,6 +2,9 @@ package com.green.greengram4.security.oauth2.userinfo;
 
 import com.green.greengram4.security.oauth2.SocialProviderType;
 import com.green.greengram4.user.UserMapper;
+import com.green.greengram4.user.model.UserSigninDto;
+import com.green.greengram4.user.model.UserSigninProcVo;
+import com.green.greengram4.user.model.UserSignupProcDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.AuthenticationException;
@@ -39,6 +42,32 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         Map<String, Object> attributes = user.getAttributes();
         OAuth2UserInfo oAuth2UserInfo = factory.getOAuth2UserInfo(socialProviderType, attributes);
+
+        UserSigninDto dto = UserSigninDto.builder()
+                .providerType(socialProviderType.name())
+                .uid(oAuth2UserInfo.getId())
+                .build();
+        UserSigninProcVo savedUser = mapper.selLoginInfoByUid(dto);
+        if (savedUser == null) {
+            savedUser = signupUser(oAuth2UserInfo, socialProviderType);
+        }
+        return null;
+    }
+
+    private UserSigninProcVo signupUser(OAuth2UserInfo oAuth2UserInfo, SocialProviderType socialProviderType) {
+        UserSignupProcDto dto = UserSignupProcDto.builder()
+                .providerType(socialProviderType.name())
+                .uid(oAuth2UserInfo.getId())
+                .upw("social")
+                .nm(oAuth2UserInfo.getName())
+                .pic(oAuth2UserInfo.getImageUrl())
+                .role("USER")
+                .build();
+        int insResult = mapper.insUser(dto);
+
+        UserSigninProcVo vo = new UserSigninProcVo();
+        vo.setIuser(dto.getIuser());
+        vo.set
         return null;
     }
 }

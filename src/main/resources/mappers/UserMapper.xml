@@ -6,17 +6,19 @@
     <insert id="insUser" useGeneratedKeys="true" keyProperty="iuser">
         INSERT INTO t_user
         SET uid = #{uid},
+        provider_type = #{providerType},
         upw = #{upw},
         nm = #{nm},
-        pic = #{pic}
+        pic = #{pic},
+        role = #{role}
     </insert>
 
     <select id="selLoginInfoByUid">
         SELECT iuser, nm, pic, upw, role
         FROM t_user
         <where>
-            <if test=" uid != null and uid !='' ">
-                uid = #{uid}
+            <if test=" uid != null and uid !='' and providerType != null and providerType != '' ">
+                uid = #{uid} AND provider_type = #{providerType}
             </if>
             <if test="iuser > 0">
                 iuser = #{iuser}
@@ -36,10 +38,10 @@
         ON B.ifeed = C.ifeed
         INNER JOIN (
         SELECT
-              SUM(if (from_iuser = #{targetIuser} ,1 ,0) ) AS following
-            , SUM(if (to_iuser = #{targetIuser} ,1 ,0) ) AS follower
-            , (SUM(CASE WHEN from_iuser = #{loginedIuser} AND to_iuser = #{targetIuser} THEN 1 ELSE 0 END)
-            + SUM(CASE WHEN from_iuser = #{targetIuser} AND to_iuser = #{loginedIuser} THEN 2 ELSE 0 END)) AS followState
+        SUM(if (from_iuser = #{targetIuser} ,1 ,0) ) AS following
+        , SUM(if (to_iuser = #{targetIuser} ,1 ,0) ) AS follower
+        , (SUM(CASE WHEN from_iuser = #{loginedIuser} AND to_iuser = #{targetIuser} THEN 1 ELSE 0 END)
+        + SUM(CASE WHEN from_iuser = #{targetIuser} AND to_iuser = #{loginedIuser} THEN 2 ELSE 0 END)) AS followState
         FROM t_user_follow
         ) AS D
         WHERE A.iuser = #{targetIuser}
