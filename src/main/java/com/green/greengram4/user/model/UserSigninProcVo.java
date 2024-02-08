@@ -8,4 +8,5 @@ public class UserSigninProcVo {
     private String nm;
     private String pic;
     private String upw;
+    private String role;
 }

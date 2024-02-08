@@ -12,7 +12,7 @@
     </insert>
 
     <select id="selLoginInfoByUid">
-        SELECT iuser, nm, pic, upw
+        SELECT iuser, nm, pic, upw, role
         FROM t_user
         <where>
             <if test=" uid != null and uid !='' ">

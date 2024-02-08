@@ -24,31 +24,23 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                 .formLogin(formLogin -> formLogin.disable())
                 .csrf(csrf -> csrf.disable())   //설정 -> 기본적으로 스프링이 제공해주는 보안 기법 사용 x     cos, csrf 검색 참고
                 .authorizeHttpRequests(author -> author.requestMatchers(
-                                        "/api/user/signin",    //requestMatchers() : 요청이 다음과 같으면
-                                        "/api/user/signup",
-                                        "/api/user/refresh-token",
-                                        "/error",
-                                        "/err",
-                                        "/",
-                                        "/profile",
-                                        "/profile/**",
-                                        "/pic/**",
-                                        "/feed",
-                                        "/feed/**",
-                                        "/fimg/**",
-                                        "/css/**",
-                                        "/index.html",
-                                        "/static/**",
-                                        "/swagger.html",    //스웨거 사용을 위한 설정 3줄
-                                        "/swagger-ui/**",
-                                        "/v3/api-docs/**",
-                                        "/api/open/**"
-                                ).permitAll()  //permitAll() : 무조건 통과
+                                        "/api/feed",
+                                        "/api/feed/comment",
+                                        "/api/dm",
+                                        "/api/dm/msg"
+                                ).authenticated()
+                                .requestMatchers(HttpMethod.POST,
+                                        "/api/user/signout",
+                                        "/api/user/follow")
+                                .authenticated()
+                                .requestMatchers(HttpMethod.GET, "/api/user").authenticated()
+                                .requestMatchers(HttpMethod.PATCH, "/api/user/pic").authenticated()
+                                .requestMatchers(HttpMethod.GET, "/api/feed/fav").hasAnyRole("ADMIN")
                                 //.requestMatchers(HttpMethod.GET, "/product/**").permitAll() //해당 주소값의 get요청만 허용
                                 //.requestMatchers(HttpMethod.POST, "/product/**").permitAll() //해당 주소값의 post요청만 허용
                                 //.requestMatchers("/todo-api").hasAnyRole("USER", "ADMIN")   //해당 요청 가능한 권한(역할) 지정
                                 //.anyRequest().hasRole("ADMIN")  //이외의 모든 요청은 ADMIN만 가능
-                                .anyRequest().authenticated()   //이외의 요청은 로그인 해야만(authenticated()) 사용 가능
+                                .anyRequest().permitAll()   //이외의 요청은 로그인 해야만(authenticated()) 사용 가능
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 //기존 필터(UsernamePasswordAuthenticationFilter.class) 전에 해당 필터(jwtAuthenticationFilter) 사용

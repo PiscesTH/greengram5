@@ -3,6 +3,7 @@ package com.green.greengram4.security;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -15,7 +16,13 @@ public class MyUserDetails implements UserDetails { //요청이 왔을 때 authe
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {    //권한
-        return null;
+        if (myPrincipal == null) {
+            return null;
+        }
+        return this.myPrincipal.getRoles().stream()
+//                .map(SimpleGrantedAuthority::new)
+                .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                .toList();
     }
 
     @Override

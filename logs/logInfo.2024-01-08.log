@@ -1,5 +1,5 @@
-[2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
 [2024-01-08 09:59:39 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
 [2024-01-08 09:59:40 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
@@ -20,14 +20,14 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 09:59:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 09:59:41 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 09:59:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 09:59:41 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 2.301 seconds (process running for 2.821)[0;39m
+[2024-01-08 09:59:41 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 2.301 seconds (process running for 2.821)[0;39m
 [2024-01-08 09:59:46 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 09:59:46 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
 [2024-01-08 09:59:46 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m Thread-5] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -45,15 +45,15 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.418 seconds (process running for 32.276)[0;39m
+[2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.418 seconds (process running for 32.276)[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:00:10 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m Thread-7] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -71,15 +71,15 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.387 seconds (process running for 49.901)[0;39m
+[2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.387 seconds (process running for 49.901)[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:00:28 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m Thread-11] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -97,7 +97,7 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.385 seconds (process running for 57.885)[0;39m
+[2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.385 seconds (process running for 57.885)[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:00:36 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
@@ -962,8 +962,8 @@ java.sql.SQLSyntaxErrorException: (conn=5) Unknown database 'greengram4'
 	at java.base/java.lang.Thread.run(Thread.java:833)
 [2024-01-08 10:05:03 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)[0;39m
 [2024-01-08 10:05:03 [32mINFO [0;39m Thread-15] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:05:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:05:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:05:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:05:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -981,12 +981,12 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.418 seconds (process running for 325.658)[0;39m
+[2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.418 seconds (process running for 325.658)[0;39m
 [2024-01-08 10:05:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:05:05 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)[0;39m
 [2024-01-08 10:05:05 [32mINFO [0;39m Thread-19] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:05:05 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -1004,15 +1004,15 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.379 seconds (process running for 327.5)[0;39m
+[2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.379 seconds (process running for 327.5)[0;39m
 [2024-01-08 10:05:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:06:42 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:06:42 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:06:42 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
 [2024-01-08 10:13:48 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:13:48 [32mINFO [0;39m Thread-23] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:13:48 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:13:48 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:13:48 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:13:48 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -1030,7 +1030,7 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.391 seconds (process running for 850.67)[0;39m
+[2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.391 seconds (process running for 850.67)[0;39m
 [2024-01-08 10:13:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:13:51 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
 [2024-01-08 10:13:51 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
@@ -1038,8 +1038,8 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:14:03 [32mINFO [0;39m http-nio-8082-exec-7] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 149 ms[0;39m
 [2024-01-08 10:15:15 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:15:15 [32mINFO [0;39m Thread-27] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:15:15 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -1057,12 +1057,12 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.581 seconds (process running for 937.532)[0;39m
+[2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.581 seconds (process running for 937.532)[0;39m
 [2024-01-08 10:15:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
 [2024-01-08 10:48:00 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 1 class path change (0 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 10:48:00 [32mINFO [0;39m Thread-31] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 10:48:00 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 10:48:00 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 10:48:00 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 9044 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 10:48:00 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -1079,10 +1079,10 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e020dd1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bb472c5, org.springframework.security.web.context.SecurityContextHolderFilter@263da83a, org.springframework.security.web.header.HeaderWriterFilter@7f10fb0d, org.springframework.web.filter.CorsFilter@333edc4b, org.springframework.security.web.authentication.logout.LogoutFilter@204391a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c781cea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24c85cfb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a49939, org.springframework.security.web.session.SessionManagementFilter@5ff183ad, org.springframework.security.web.access.ExceptionTranslationFilter@64c3df88, org.springframework.security.web.access.intercept.AuthorizationFilter@9e9c68b][0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.434 seconds (process running for 2902.704)[0;39m
+[2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.434 seconds (process running for 2902.704)[0;39m
 [2024-01-08 10:48:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
-[2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 8188 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 8188 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
 [2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
 [2024-01-08 11:13:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
@@ -1104,9 +1104,9 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 11:13:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 11:13:12 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 11:13:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 11:13:12 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 1.861 seconds (process running for 2.262)[0;39m
-[2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 3012 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 11:13:12 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 1.861 seconds (process running for 2.262)[0;39m
+[2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 3012 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
 [2024-01-08 11:41:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
 [2024-01-08 11:41:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
@@ -1128,11 +1128,11 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 11:41:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 11:41:06 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 11:41:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 11:41:06 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 1.893 seconds (process running for 2.297)[0;39m
+[2024-01-08 11:41:06 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 1.893 seconds (process running for 2.297)[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 3 class path changes (2 additions, 0 deletions, 1 modification)[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m Thread-5] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
-[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 3012 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
-[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 3012 (D:\Students\kth\greengram4\build\classes\java\main started by Administrator in D:\Students\kth\greengram4)[0;39m
+[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
@@ -1151,5 +1151,5 @@ This generated password is for development use only. Your security configuration
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
-[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.417 seconds (process running for 807.411)[0;39m
+[2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram4Application in 0.417 seconds (process running for 807.411)[0;39m
 [2024-01-08 11:54:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m

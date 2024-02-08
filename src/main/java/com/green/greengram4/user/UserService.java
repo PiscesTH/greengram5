@@ -52,9 +52,13 @@ public class UserService {
         if (!passwordEncoder.matches(dto.getUpw(), procVo.getUpw())) {
             throw new RestApiException(AuthErrorCode.INVALID_PASSWORD);
         }
-        MyPrincipal principal = new MyPrincipal(procVo.getIuser());
-//            String at = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getAccessTokenExpiry());
-//            String rt = jwtTokenProvider.generateToken(principal, appProperties.getJwt().getRefreshTokenExpiry());
+
+        MyPrincipal principal = MyPrincipal.builder()
+                .iuser(procVo.getIuser())
+                .build();
+        principal.getRoles().add(procVo.getRole());
+        log.info("principal : {}", principal);
+
         String at = jwtTokenProvider.generateAccessToken(principal);
         String rt = jwtTokenProvider.generateRefreshToken(principal);
 
