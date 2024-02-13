@@ -18,6 +18,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Optional;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -122,14 +124,15 @@ public class UserService {
     }
 
     public UserSigninVo getRefreshToken(HttpServletRequest req) {
-        Cookie cookie = cookieUtils.getCookie(req, "rt");
-        if (cookie == null) {
+//        Cookie cookie = cookieUtils.getCookie(req, "rt");
+        Optional<String> optRt = cookieUtils.getCookie(req, "rt").map(Cookie::getValue);
+        if (optRt.isEmpty()) {
             return UserSigninVo.builder()
                     .result(Const.FAIL)
                     .accessToken(null)
                     .build();
         }
-        String token = cookie.getValue();
+        String token = optRt.get();
         if (!jwtTokenProvider.isValidateToken(token)) {
             return UserSigninVo.builder()
                     .result(Const.FAIL)
