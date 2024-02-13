@@ -1,18 +1,939 @@
-[2024-02-08 11:42:12 [32mINFO [0;39m background-preinit] [org.hibernate.validator.internal.util.Version] [36mHV000001: Hibernate Validator 8.0.1.Final[0;39m
-[2024-02-08 11:42:12 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 8828 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
-[2024-02-08 11:42:12 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
-[2024-02-08 11:42:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
-[2024-02-08 11:42:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1200 ms[0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [com.green.greengram4.common.FirebaseConfiguration] [36mFirebaseApp Initialization Complete !!![0;39m
-[2024-02-08 11:42:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
-[2024-02-08 11:42:14 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66d418e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dd1dbef, org.springframework.security.web.context.SecurityContextHolderFilter@1da1cdff, org.springframework.security.web.header.HeaderWriterFilter@36dd8cfb, org.springframework.web.filter.CorsFilter@73cd522, org.springframework.security.web.authentication.logout.LogoutFilter@56a6a268, com.green.greengram4.security.JwtAuthenticationFilter@160ce2fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e337f3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bdb0d7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@447db50d, org.springframework.security.web.session.SessionManagementFilter@5bca1d88, org.springframework.security.web.access.ExceptionTranslationFilter@fe062ee, org.springframework.security.web.access.intercept.AuthorizationFilter@477e923][0;39m
-[2024-02-08 11:42:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
-[2024-02-08 11:42:14 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
-[2024-02-08 11:42:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
-[2024-02-08 11:42:14 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 2.513 seconds (process running for 3.013)[0;39m
+[2024-02-13 14:30:04 [32mINFO [0;39m background-preinit] [org.hibernate.validator.internal.util.Version] [36mHV000001: Hibernate Validator 8.0.1.Final[0;39m
+[2024-02-13 14:30:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 6244 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-13 14:30:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-02-13 14:30:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-02-13 14:30:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1052 ms[0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.common.FirebaseConfiguration] [36mFirebaseApp Initialization Complete !!![0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-13 14:30:05 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53da7236, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43e39d5d, org.springframework.security.web.context.SecurityContextHolderFilter@2b20bd68, org.springframework.security.web.header.HeaderWriterFilter@27793004, org.springframework.web.filter.CorsFilter@77c6a981, org.springframework.security.web.authentication.logout.LogoutFilter@46db276, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@638c11a0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@694f2cdc, com.green.greengram4.security.JwtAuthenticationFilter@7150f30e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13e82098, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a59f424, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53f30bf, org.springframework.security.web.session.SessionManagementFilter@6662cbc0, org.springframework.security.web.access.ExceptionTranslationFilter@4068ffcb, org.springframework.security.web.access.intercept.AuthorizationFilter@7321d09][0;39m
+[2024-02-13 14:30:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-13 14:30:06 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-02-13 14:30:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-02-13 14:30:06 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 2.419 seconds (process running for 2.906)[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:24 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjo1fSIsImlhdCI6MTcwNjg0Njc0MSwiZXhwIjoxNzA2ODUzOTQxfQ._zidOPdQ9Wwk4mHhwz9FTa-Gne-_dpIgiWAFV92_TUM[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjo1fSIsImlhdCI6MTcwNjg0Njc0MSwiZXhwIjoxNzA2ODUzOTQxfQ._zidOPdQ9Wwk4mHhwz9FTa-Gne-_dpIgiWAFV92_TUM[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjo1LFwicm9sZXNcIjpbXX0iLCJpYXQiOjE3MDc4MDIyMjUsImV4cCI6MTcwNzgwOTQyNX0.QQLW4kWEaNb4EXCR0A_zRejW0NQJX8zPks5nAV0Bexg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection opened. {executed in 43ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getNetworkTimeout() returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.isValid(1) returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getTransactionIsolation() returned 4[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@372de106[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed, A.contents, A.location, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic,
+        IF(C.ifeed > 0, 1, 0) AS isFav
+        FROM t_feed A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+         
+                LEFT JOIN t_feed_fav C
+             
+        ON A.ifeed = C.ifeed
+        AND C.iuser = ?
+         
+        ORDER BY ifeed DESC
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4fb693db[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 20) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed, A.contents, A.location, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic, IF(C.ifeed > 0, 1, 0) AS isFav FROM t_feed A JOIN t_user 
+B ON A.iuser = B.iuser LEFT JOIN t_feed_fav C ON A.ifeed = C.ifeed AND C.iuser = 0 ORDER BY 
+ifeed DESC LIMIT 0, 20  {executed in 0 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@31c1437b[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@2e6ed8ac[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 5[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(contents) returned 111[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(location) returned 111[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(createdAt) returned 2024-02-07 11:31:20[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(writerIuser) returned 7[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerNm) returned 여름[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerPic) returned https://images.unsplash.com/photo-1701213327963-742e60643f28?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(isFav) returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.wasNull() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 4[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(contents) returned test[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(location) returned ew[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(createdAt) returned 2024-02-01 10:29:23[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(writerIuser) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerNm) returned 복숭아[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerPic) returned https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(isFav) returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.wasNull() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(contents) returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(location) returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(createdAt) returned 2024-02-01 10:29:09[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(writerIuser) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerNm) returned 복숭아[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerPic) returned https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(isFav) returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.wasNull() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 2[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(contents) returned 수정하고 다시 작성함[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(location) returned 인텔리제이[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(createdAt) returned 2024-01-16 10:03:27[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(writerIuser) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerNm) returned 복숭아[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerPic) returned https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(isFav) returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.wasNull() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(contents) returned 테스트중[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(location) returned 학원[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(createdAt) returned 2024-01-16 09:59:34[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(writerIuser) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerNm) returned 복숭아[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(writerPic) returned https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(isFav) returned 0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.wasNull() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|------|------------|---------|--------------------|------|----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+|ifeed |contents    |location |created_at          |iuser |nm  |pic                                                                                                                                                                    |isfav |
+|------|------------|---------|--------------------|------|----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+|5     |111         |111      |2024-02-07 11:31:20 |7     |여름  |https://images.unsplash.com/photo-1701213327963-742e60643f28?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |0     |
+|4     |test        |ew       |2024-02-01 10:29:23 |3     |복숭아 |https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |0     |
+|3     |null        |null     |2024-02-01 10:29:09 |3     |복숭아 |https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |0     |
+|2     |수정하고 다시 작성함 |인텔리제이    |2024-01-16 10:03:27 |3     |복숭아 |https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |0     |
+|1     |테스트중        |학원       |2024-01-16 09:59:34 |3     |복숭아 |https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |0     |
+|------|------------|---------|--------------------|------|----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@65ffff36[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        FROM t_feed_comment A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.ifeed = ?
+        ORDER BY A.ifeed_comment
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5aede2c9[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 5) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic FROM t_feed_comment A JOIN t_user B ON A.iuser = B.iuser 
+WHERE A.ifeed = 5 ORDER BY A.ifeed_comment LIMIT 0, 4  {executed in 0 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@e41674a[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@68aa5695[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|--------------|--------|-----------|------|---|----|
+|ifeed_comment |comment |created_at |iuser |nm |pic |
+|--------------|--------|-----------|------|---|----|
+|--------------|--------|-----------|------|---|----|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@2f1b26e7[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        FROM t_feed_comment A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.ifeed = ?
+        ORDER BY A.ifeed_comment
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1ad57267[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic FROM t_feed_comment A JOIN t_user B ON A.iuser = B.iuser 
+WHERE A.ifeed = 4 ORDER BY A.ifeed_comment LIMIT 0, 4  {executed in 0 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1fab3d40[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@250fdede[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|--------------|--------|-----------|------|---|----|
+|ifeed_comment |comment |created_at |iuser |nm |pic |
+|--------------|--------|-----------|------|---|----|
+|--------------|--------|-----------|------|---|----|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@53d5f886[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        FROM t_feed_comment A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.ifeed = ?
+        ORDER BY A.ifeed_comment
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6222fed1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 3) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic FROM t_feed_comment A JOIN t_user B ON A.iuser = B.iuser 
+WHERE A.ifeed = 3 ORDER BY A.ifeed_comment LIMIT 0, 4  {executed in 0 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@24259ee8[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@7f075d9c[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|--------------|--------|-----------|------|---|----|
+|ifeed_comment |comment |created_at |iuser |nm |pic |
+|--------------|--------|-----------|------|---|----|
+|--------------|--------|-----------|------|---|----|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@3ea8b32[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        FROM t_feed_comment A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.ifeed = ?
+        ORDER BY A.ifeed_comment
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@76cb39e8[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 2) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic FROM t_feed_comment A JOIN t_user B ON A.iuser = B.iuser 
+WHERE A.ifeed = 2 ORDER BY A.ifeed_comment LIMIT 0, 4  {executed in 15 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7e913b07[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@3b3f72f4[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|--------------|--------|-----------|------|---|----|
+|ifeed_comment |comment |created_at |iuser |nm |pic |
+|--------------|--------|-----------|------|---|----|
+|--------------|--------|-----------|------|---|----|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@6c5bcdba[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
+            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        FROM t_feed_comment A
+        JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.ifeed = ?
+        ORDER BY A.ifeed_comment
+        LIMIT ?, ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4370bda0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 1) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 0) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt, A.iuser AS writerIuser, 
+B.nm AS writerNm, B.pic AS writerPic FROM t_feed_comment A JOIN t_user B ON A.iuser = B.iuser 
+WHERE A.ifeed = 1 ORDER BY A.ifeed_comment LIMIT 0, 4  {executed in 0 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@344effca[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@74a68365[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|--------------|--------|-----------|------|---|----|
+|ifeed_comment |comment |created_at |iuser |nm |pic |
+|--------------|--------|-----------|------|---|----|
+|--------------|--------|-----------|------|---|----|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@4622a656[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT ifeed, pic
+        FROM t_feed_pics
+        WHERE ifeed IN (0
+          
+            ,?
+          
+            ,?
+          
+            ,?
+          
+            ,?
+          
+            ,?
+         )) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@345504a0[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(1, 5) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(2, 4) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(3, 3) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(4, 2) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.setInt(5, 1) returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. SELECT ifeed, pic FROM t_feed_pics WHERE ifeed IN (0 ,5 ,4 ,3 ,2 ,1 )  {executed in 1 ms}[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@405e5467[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@735849d7[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned ed498772-f129-4fc3-a7ac-bbf4029eb6df.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 84884b37-84c8-4e80-9c10-3fadfa8d1cc9.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 2[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned e39e06b3-4701-422e-9f76-8b6d8bbe31c2.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 2[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 11ba759c-6fda-4319-b0d9-8a264b2c4e03.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 6465dd1b-0d2b-407d-a7a9-4e0b92ce8d8f.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 3[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 8beac23a-6968-4e27-b76c-cb0dae455bfd.png[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 4[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 92abe241-3f7f-4d64-86c5-013b5f5af556.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 4[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 5db57fcb-8198-440d-936b-555b63196266.png[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getInt(ifeed) returned 5[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned 95d09daa-e949-4131-abeb-ef7b13de6f88.jpg[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m
+|------|-----------------------------------------|
+|ifeed |pic                                      |
+|------|-----------------------------------------|
+|1     |ed498772-f129-4fc3-a7ac-bbf4029eb6df.jpg |
+|1     |84884b37-84c8-4e80-9c10-3fadfa8d1cc9.jpg |
+|2     |e39e06b3-4701-422e-9f76-8b6d8bbe31c2.jpg |
+|2     |11ba759c-6fda-4319-b0d9-8a264b2c4e03.jpg |
+|3     |6465dd1b-0d2b-407d-a7a9-4e0b92ce8d8f.jpg |
+|3     |8beac23a-6968-4e27-b76c-cb0dae455bfd.png |
+|4     |92abe241-3f7f-4d64-86c5-013b5f5af556.jpg |
+|4     |5db57fcb-8198-440d-936b-555b63196266.png |
+|5     |95d09daa-e949-4131-abeb-ef7b13de6f88.jpg |
+|------|-----------------------------------------|
+[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@5a586d08[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m http-nio-8080-exec-4] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:30:25 [31mERROR[0;39m http-nio-8080-exec-4] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] [36mServlet.service() for servlet [dispatcherServlet] in context with path [] threw exception[0;39m
+java.lang.NullPointerException: Cannot invoke "com.green.greengram4.user.model.UserSigninProcVo.getUid()" because "this.userEntity" is null
+	at com.green.greengram4.security.MyUserDetails.getUsername(MyUserDetails.java:42)
+	at org.springframework.security.authentication.AbstractAuthenticationToken.getName(AbstractAuthenticationToken.java:72)
+	at org.springframework.web.servlet.FrameworkServlet.getUsernameForRequest(FrameworkServlet.java:1168)
+	at org.springframework.web.servlet.FrameworkServlet.publishRequestHandledEvent(FrameworkServlet.java:1152)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1031)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.green.greengram4.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m2. Connection opened. {executed in 2ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m2. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m2. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m2. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m3. Connection opened. {executed in 2ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m3. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m3. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m3. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m4. Connection opened. {executed in 2ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m4. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m4. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m4. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m5. Connection opened. {executed in 2ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m5. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m5. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m5. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m6. Connection opened. {executed in 0ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m6. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m6. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m6. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m7. Connection opened. {executed in 2ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m7. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m7. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m7. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m8. Connection opened. {executed in 1ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m8. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m8. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m8. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m9. Connection opened. {executed in 1ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m9. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m9. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m9. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m10. Connection opened. {executed in 3ms} [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m10. Connection.new Connection returned [0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m10. Connection.isReadOnly() returned false[0;39m
+[2024-02-13 14:30:25 [32mINFO [0;39m HikariPool-1 connection adder] [log4jdbc.log4j2] [36m10. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36msaveAuthorizationRequest[0;39m
+[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36mredirectUriAfterLogin : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36msaveAuthorizationRequest[0;39m
+[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36mredirectUriAfterLogin : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjo1LFwicm9sZXNcIjpbXX0iLCJpYXQiOjE3MDc4MDIyMjUsImV4cCI6MTcwNzgwOTQyNX0.QQLW4kWEaNb4EXCR0A_zRejW0NQJX8zPks5nAV0Bexg[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. Connection.isValid(5) returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. Connection.getAutoCommit() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.new PreparedStatement returned [0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. Connection.prepareStatement(SELECT iuser, nm, pic, upw, role, provider_type AS providerType
+        FROM t_user) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2da468c8[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. SELECT iuser, nm, pic, upw, role, provider_type AS providerType FROM t_user  {executed in 1 ms}[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.execute() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.new ResultSet returned [0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@436d5cc7[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getMetaData() returned org.mariadb.jdbc.client.result.ResultSetMetaData@3f6347ef[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getType() returned 1003[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 1[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 겨울[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1457269449834-928af64c684d?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$J/S/1GM.vt3G.rbStkd5DuURa4Q3s3WeXBsGoPNbgUqPugS6lNzHW[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned ADMIN[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 2[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 별[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1537420327992-d6e192287183?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$RDLSIUgYcaktlO0FoWjJ6OLbbsez/zUDLgCMcAsU4EkIpS9TNxEB6[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 3[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 복숭아[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$294btnBPyhs.bu04YMCppefPDkaOp9i0O9BHqqpN4a2LCAh6Z..ia[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 4[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 레몬[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://plus.unsplash.com/premium_photo-1675237625735-0cd0323ecefb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$6k5eTZLIO8VAVbXZwcYAHegtePPiyZkrCmSCpI09TKkSk/r9LmuAG[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 5[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 허블[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned bd97066f-9cbe-4697-b9ab-438cd1d67d7d.jpg[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$7TS5/.1hJ/o/fb6Yp/TT6uBJMnqE4HX30v/0/YL6YmYH4kyUkZ21a[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned ADMIN[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 6[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 포토그래퍼[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1701220293337-c1585aab8372?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$Vk/rHIJrR3mmLjhbAgbZ2eNgi32vxAQwNbVaOC0rGNC.zaVQYxzJe[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 7[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 여름[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1701213327963-742e60643f28?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$L7dfMCoozJMQnEGzuEpU4OLNM3ZZBzf3nshtIafHh.XaFy746iXrS[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 9[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 휴대폰[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1682687982501-1e58ab814714?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$L7dfMCoozJMQnEGzuEpU4OLNM3ZZBzf3nshtIafHh.XaFy746iXrS[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 10[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 물[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://images.unsplash.com/photo-1702234577513-151004f4cb44?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$fqO6DSATImyClCWCw7z0V.DK4olgO3Crgzj1RQPoAJWgBe8molP22[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned true[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getInt(iuser) returned 11[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(nm) returned 빵[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(pic) returned https://plus.unsplash.com/premium_photo-1701007201981-918b53b2fd4e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(upw) returned $2a$10$aaH1e5Nw1OECaMZZmEaFve7c8kRNxdpklLblLJFLPndwMFU0nOody[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(role) returned USER[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.getString(providerType) returned LOCAL[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.isClosed() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m
+|------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|------|--------------|
+|iuser |nm    |pic                                                                                                                                                                          |upw                                                          |role  |provider_type |
+|------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|------|--------------|
+|1     |겨울    |https://images.unsplash.com/photo-1457269449834-928af64c684d?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$J/S/1GM.vt3G.rbStkd5DuURa4Q3s3WeXBsGoPNbgUqPugS6lNzHW |ADMIN |LOCAL         |
+|2     |별     |https://images.unsplash.com/photo-1537420327992-d6e192287183?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$RDLSIUgYcaktlO0FoWjJ6OLbbsez/zUDLgCMcAsU4EkIpS9TNxEB6 |USER  |LOCAL         |
+|3     |복숭아   |https://images.unsplash.com/photo-1700413739071-d7ca09f1eb7b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$294btnBPyhs.bu04YMCppefPDkaOp9i0O9BHqqpN4a2LCAh6Z..ia |USER  |LOCAL         |
+|4     |레몬    |https://plus.unsplash.com/premium_photo-1675237625735-0cd0323ecefb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |$2a$10$6k5eTZLIO8VAVbXZwcYAHegtePPiyZkrCmSCpI09TKkSk/r9LmuAG |USER  |LOCAL         |
+|5     |허블    |bd97066f-9cbe-4697-b9ab-438cd1d67d7d.jpg                                                                                                                                     |$2a$10$7TS5/.1hJ/o/fb6Yp/TT6uBJMnqE4HX30v/0/YL6YmYH4kyUkZ21a |ADMIN |LOCAL         |
+|6     |포토그래퍼 |https://images.unsplash.com/photo-1701220293337-c1585aab8372?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$Vk/rHIJrR3mmLjhbAgbZ2eNgi32vxAQwNbVaOC0rGNC.zaVQYxzJe |USER  |LOCAL         |
+|7     |여름    |https://images.unsplash.com/photo-1701213327963-742e60643f28?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$L7dfMCoozJMQnEGzuEpU4OLNM3ZZBzf3nshtIafHh.XaFy746iXrS |USER  |LOCAL         |
+|9     |휴대폰   |https://images.unsplash.com/photo-1682687982501-1e58ab814714?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$L7dfMCoozJMQnEGzuEpU4OLNM3ZZBzf3nshtIafHh.XaFy746iXrS |USER  |LOCAL         |
+|10    |물     |https://images.unsplash.com/photo-1702234577513-151004f4cb44?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D       |$2a$10$fqO6DSATImyClCWCw7z0V.DK4olgO3Crgzj1RQPoAJWgBe8molP22 |USER  |LOCAL         |
+|11    |빵     |https://plus.unsplash.com/premium_photo-1701007201981-918b53b2fd4e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D |$2a$10$aaH1e5Nw1OECaMZZmEaFve7c8kRNxdpklLblLJFLPndwMFU0nOody |USER  |LOCAL         |
+|------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|------|--------------|
+[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.next() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. ResultSet.close() returned void[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@29df777[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.getMoreResults() returned false[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.getUpdateCount() returned -1[0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. PreparedStatement.close() returned [0;39m
+[2024-02-13 14:31:39 [32mINFO [0;39m http-nio-8080-exec-6] [log4jdbc.log4j2] [36m1. Connection.clearWarnings() returned [0;39m
+[2024-02-13 14:31:39 [33mWARN [0;39m http-nio-8080-exec-6] [com.green.greengram4.exception.GlobalExceptionHandler] [36mhandleException[0;39m
+org.mybatis.spring.MyBatisSystemException: null
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy97.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy99.selLoginInfoByUid(Unknown Source)
+	at com.green.greengram4.user.UserService.signin(UserService.java:50)
+	at com.green.greengram4.user.UserController.postSignin(UserController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.green.greengram4.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 10
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 117 common frames omitted
+[2024-02-13 14:31:39 [33mWARN [0;39m http-nio-8080-exec-6] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.mybatis.spring.MyBatisSystemException][0;39m
+[2024-02-13 14:31:39 [31mERROR[0;39m http-nio-8080-exec-6] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] [36mServlet.service() for servlet [dispatcherServlet] in context with path [] threw exception[0;39m
+java.lang.NullPointerException: Cannot invoke "com.green.greengram4.user.model.UserSigninProcVo.getUid()" because "this.userEntity" is null
+	at com.green.greengram4.security.MyUserDetails.getUsername(MyUserDetails.java:42)
+	at org.springframework.security.authentication.AbstractAuthenticationToken.getName(AbstractAuthenticationToken.java:72)
+	at org.springframework.web.servlet.FrameworkServlet.getUsernameForRequest(FrameworkServlet.java:1168)
+	at org.springframework.web.servlet.FrameworkServlet.publishRequestHandledEvent(FrameworkServlet.java:1152)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1031)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.green.greengram4.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-02-13 14:33:31 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m1. Connection closed. {executed in 1ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m1. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m2. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m2. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m3. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m3. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m4. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m4. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m5. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m5. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m6. Connection closed. {executed in 1ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m6. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m7. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m7. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m8. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m8. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m9. Connection closed. {executed in 1ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m9. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m10. Connection closed. {executed in 0ms} [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m HikariPool-1 connection closer] [log4jdbc.log4j2] [36m10. Connection.close() returned [0;39m
+[2024-02-13 14:33:31 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m

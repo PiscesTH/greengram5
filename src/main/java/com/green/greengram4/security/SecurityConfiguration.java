@@ -1,5 +1,9 @@
 package com.green.greengram4.security;
 
+import com.green.greengram4.security.oauth2.CustomOAuth2UserService;
+import com.green.greengram4.security.oauth2.OAuth2AuthenticationFailureHandler;
+import com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository;
+import com.green.greengram4.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +20,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfiguration {    //인증 & 인가 담당
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final OAuth2AuthenticationFailureHandler failureHandler;
+    private final OAuth2AuthenticationRequestCookieRepository requestCookieRepository;
+    private final OAuth2AuthenticationSuccessHandler successHandler;
+    private final CustomOAuth2UserService customOAuth2UserService;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
@@ -48,6 +56,13 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                     except.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
                             .accessDeniedHandler(new JwtAccessDeniedHandler());
                 })
+                .oauth2Login(oath2 -> oath2.authorizationEndpoint(auth -> auth.baseUri("/oauth2/authorization")
+                                        .authorizationRequestRepository(requestCookieRepository)
+                                ).redirectionEndpoint(redirection -> redirection.baseUri("/*/oauth2/code/*"))
+                                .userInfoEndpoint(userinfo -> userinfo.userService(customOAuth2UserService))
+                                .successHandler(successHandler)
+                                .failureHandler(failureHandler)
+                )
                 .build();  //적는 순서 중요
     }
 
