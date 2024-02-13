@@ -14,7 +14,7 @@
     </insert>
 
     <select id="selLoginInfoByUid">
-        SELECT iuser, nm, pic, upw, role
+        SELECT iuser, nm, pic, upw, role, provider_type AS providerType
         FROM t_user
         <where>
             <if test=" uid != null and uid !='' and providerType != null and providerType != '' ">

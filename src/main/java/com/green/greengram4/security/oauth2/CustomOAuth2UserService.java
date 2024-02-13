@@ -1,6 +1,10 @@
-package com.green.greengram4.security.oauth2.userinfo;
+package com.green.greengram4.security.oauth2;
 
+import com.green.greengram4.security.MyPrincipal;
+import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.security.oauth2.SocialProviderType;
+import com.green.greengram4.security.oauth2.userinfo.OAuth2UserInfo;
+import com.green.greengram4.security.oauth2.userinfo.OAuth2UserInfoFactory;
 import com.green.greengram4.user.UserMapper;
 import com.green.greengram4.user.model.UserSigninDto;
 import com.green.greengram4.user.model.UserSigninProcVo;
@@ -14,6 +18,7 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 @Service
@@ -51,7 +56,16 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         if (savedUser == null) {
             savedUser = signupUser(oAuth2UserInfo, socialProviderType);
         }
-        return null;
+        MyPrincipal myPrincipal = MyPrincipal.builder()
+                .iuser(savedUser.getIuser())
+                .build();
+        myPrincipal.getRoles().add(savedUser.getRole());
+
+        return MyUserDetails.builder()
+                .userEntity(savedUser)
+                .attributes(user.getAttributes())
+                .myPrincipal(myPrincipal)
+                .build();
     }
 
     private UserSigninProcVo signupUser(OAuth2UserInfo oAuth2UserInfo, SocialProviderType socialProviderType) {
@@ -67,7 +81,10 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         UserSigninProcVo vo = new UserSigninProcVo();
         vo.setIuser(dto.getIuser());
-
-        return null;
+        vo.setRole(dto.getRole());
+        vo.setNm(dto.getNm());
+        vo.setPic(dto.getPic());
+        vo.setUid(dto.getUid());
+        return vo;
     }
 }

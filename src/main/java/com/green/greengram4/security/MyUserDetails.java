@@ -1,6 +1,8 @@
 package com.green.greengram4.security;
 
 
+import com.green.greengram4.user.model.UserEntity;
+import com.green.greengram4.user.model.UserSigninProcVo;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,9 +15,11 @@ import java.util.Map;
 @Data
 @Builder
 public class MyUserDetails implements UserDetails, OAuth2User { //요청이 왔을 때 authentication 에 넣는 용도
+    //UserDetails : local login / OAuth2User : social login 
 
     private MyPrincipal myPrincipal;
-    private Map<String, Object> attributes;
+    private Map<String, Object> attributes; //OAuth2User의 getAttributes() 오버라이딩 해결 & 없으면 DB 한번 더 호출하는 경우가 생김 ?
+    private UserSigninProcVo userEntity;    //local login -> myPrincipal 만 사용
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {    //권한
@@ -35,7 +39,7 @@ public class MyUserDetails implements UserDetails, OAuth2User { //요청이 왔�
 
     @Override
     public String getUsername() {   //시큐리티 루틴 이용하면 구현 필요
-        return null;
+        return userEntity.getUid();
     }
 
     //아래 메서드들은 로그인 커스텀 처리하면(시큐리티 루틴 안 탈때) 사용 안되는 메서드들.

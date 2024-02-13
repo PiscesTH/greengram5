@@ -10,4 +10,5 @@ public class UserSigninProcVo {
     private String upw;
     private String role;
     private String providerType;
+    private String uid;
 }
