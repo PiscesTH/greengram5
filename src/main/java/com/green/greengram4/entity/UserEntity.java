@@ -1,16 +1,23 @@
 package com.green.greengram4.entity;
 
 import com.green.greengram4.common.ProviderTypeEnum;
+import com.green.greengram4.common.RoleEnum;
 import jakarta.persistence.*;
+import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
+@Data
 @Entity //pk적용 필수
 @Table(name = "t_user")
 public class UserEntity extends BaseEntity {
     @Id //pk설정
+    @Column(columnDefinition = "BIGINT UNSIGNED")
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment 설정. AUTO -> 시퀀스 사용
     private Long iuser;
 
-    @Column(length = 10, name = "provider_type", nullable = false)
+    @Column(name = "provider_type", nullable = false)
+    @Enumerated(value = EnumType.STRING)    //enum String으로 사용할 때
+    @ColumnDefault("'LOCAL'")   //기본값 설정
     //pk외의 컬럼 설정, 길이, 이름, null허용 설정 가능
     private ProviderTypeEnum providerType;
 
@@ -26,6 +33,8 @@ public class UserEntity extends BaseEntity {
     @Column(length = 2100)
     private String pic;
 
-    @Column(length = 10, nullable = false)
-    private String role;
+    @Column(nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    @ColumnDefault("'USER'")
+    private RoleEnum role;
 }
