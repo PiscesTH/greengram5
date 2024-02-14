@@ -1,7 +1,6 @@
 package com.green.greengram4.security;
 
 
-import com.green.greengram4.user.model.UserEntity;
 import com.green.greengram4.user.model.UserSigninProcVo;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -38,8 +37,8 @@ public class MyUserDetails implements UserDetails, OAuth2User { //요청이 왔�
     }
 
     @Override
-    public String getUsername() {   //시큐리티 루틴 이용하면 구현 필요
-        return userEntity.getUid();
+    public String getUsername() {   //시큐리티 루틴 이용하면 구현 필요. 소셜 로그인 하면 사용하는 듯 ?
+        return userEntity == null ? null : userEntity.getUid();
     }
 
     //아래 메서드들은 로그인 커스텀 처리하면(시큐리티 루틴 안 탈때) 사용 안되는 메서드들.

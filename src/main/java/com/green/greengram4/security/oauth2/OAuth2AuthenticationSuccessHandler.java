@@ -50,7 +50,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     protected String determineTargetUrl(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
         Optional<String> redirectUri = cookieUtils.getCookie(request, REDIRECT_URI_PARAM_COOKIE_NAME)
                 .map(Cookie::getValue);
-        if (redirectUri.isPresent() && hasAuthorizedRedirectUri(redirectUri.get())) {
+        if (redirectUri.isPresent() && !hasAuthorizedRedirectUri(redirectUri.get())) {
             throw new IllegalArgumentException("Unauthorized Redirect URI");
         }
         String targetUrl = redirectUri.orElse(getDefaultTargetUrl());
@@ -66,7 +66,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         cookieUtils.setCookie(response, "rt", rt, rtCookieMaxAge);
 
         UserSigninProcVo userEntity = myUserDetails.getUserEntity();
-        
+
+        //변경할 만한 부분 ?
         return UriComponentsBuilder.fromUriString(targetUrl)
                 .queryParam("access_token", at)
                 .queryParam("iuser", userEntity.getIuser())
@@ -83,18 +84,19 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     }
 
     private boolean hasAuthorizedRedirectUri(String uri) {
-        URI clientRedirectUri = URI.create(uri);
-        log.info("clientRedirectUri.getHost() : {}", clientRedirectUri.getHost());
+        URI clientRedriectUri = URI.create(uri);
+        log.info("clientRedriectUri.getHost(): {}", clientRedriectUri.getHost());
+        log.info("clientRedriectUri.getPort(): {}", clientRedriectUri.getPort());
+
         return appProperties.getOauth2().getAuthorizedRedirectUris()
-                .stream().anyMatch(redirectUri -> {
-                            URI authorizedURI = URI.create(redirectUri);
-                            if (authorizedURI.getHost().equalsIgnoreCase(clientRedirectUri.getHost())
-                                    //ex) http://localhost:8080/oauth/redirect 의 host값 : http://localhost 
-                                    && authorizedURI.getPort() == clientRedirectUri.getPort()) ;
-                            {
-                                return true;
-                            }
-                        }
-                );
+                .stream()
+                .anyMatch(redirectUri -> {
+                    URI authorizedURI = URI.create(redirectUri);
+                    if(authorizedURI.getHost().equalsIgnoreCase(clientRedriectUri.getHost())
+                            && authorizedURI.getPort() == clientRedriectUri.getPort()) {
+                        return true;
+                    }
+                    return false;
+                });
     }
 }

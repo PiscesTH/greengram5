@@ -7,7 +7,7 @@ import com.google.firebase.messaging.Notification;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.dm.model.*;
 import com.green.greengram4.user.UserMapper;
-import com.green.greengram4.user.model.UserEntity;
+import com.green.greengram4.user.model.UserModel;
 import com.green.greengram4.user.model.UserSigninDto;
 import com.green.greengram4.user.model.UserSigninProcVo;
 import lombok.RequiredArgsConstructor;
@@ -45,7 +45,7 @@ public class DmService {
         String createdAt = now.format(formatter); // 포맷 적용
 
         //상대방의 firebaseToken값 필요. 나의 pic, iuser값 필요.
-        UserEntity otherPerson = mapper.selOtherPersonByLoginUser(dto);
+        UserModel otherPerson = mapper.selOtherPersonByLoginUser(dto);
 
         try {
 
