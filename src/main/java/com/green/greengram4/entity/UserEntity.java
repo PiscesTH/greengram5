@@ -8,7 +8,11 @@ import org.hibernate.annotations.ColumnDefault;
 
 @Data
 @Entity //pk적용 필수
-@Table(name = "t_user")
+@Table(name = "t_user", uniqueConstraints = {
+        @UniqueConstraint(
+                columnNames = {"provider_type", "uid"}
+        )
+})   //복합 유니크 걸때 클래스 위에서 함
 public class UserEntity extends BaseEntity {
     @Id //pk설정
     @Column(columnDefinition = "BIGINT UNSIGNED")

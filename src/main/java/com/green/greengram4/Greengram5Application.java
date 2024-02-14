@@ -3,7 +3,9 @@ package com.green.greengram4;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing  //@EntityListeners(AuditingEntityListener.class) 사용할 때 작성해야함
 @ConfigurationPropertiesScan
 @SpringBootApplication
 public class Greengram5Application {
