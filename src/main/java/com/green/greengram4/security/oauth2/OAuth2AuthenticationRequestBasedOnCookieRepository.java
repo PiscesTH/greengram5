@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class OAuth2AuthenticationRequestCookieRepository
+public class OAuth2AuthenticationRequestBasedOnCookieRepository
         implements AuthorizationRequestRepository<OAuth2AuthorizationRequest> {
     public static final String OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME = "oauth2_auth_request";
     public static final String REDIRECT_URI_PARAM_COOKIE_NAME = "redirect_uri";
@@ -41,7 +41,7 @@ public class OAuth2AuthenticationRequestCookieRepository
 
         cookieUtils.setCookie(response, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME, serializeAuthReq, COOKIE_EXPIRE_SECONDS);
 
-        String redirectUriAfterLogin = request.getParameter(OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME);
+        String redirectUriAfterLogin = request.getParameter(REDIRECT_URI_PARAM_COOKIE_NAME);
         log.info("redirectUriAfterLogin : {}", redirectUriAfterLogin);
         if (StringUtils.isNotBlank(redirectUriAfterLogin)) {
             cookieUtils.setCookie(response, REDIRECT_URI_PARAM_COOKIE_NAME, redirectUriAfterLogin, COOKIE_EXPIRE_SECONDS);

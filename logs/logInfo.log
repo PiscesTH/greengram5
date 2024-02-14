@@ -550,16 +550,16 @@ java.lang.NullPointerException: Cannot invoke "com.green.greengram4.user.model.U
 [2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:32 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
-[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36msaveAuthorizationRequest[0;39m
-[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36mredirectUriAfterLogin : null[0;39m
+[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository] [36msaveAuthorizationRequest[0;39m
+[2024-02-13 14:30:39 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository] [36mredirectUriAfterLogin : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:30:41 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
-[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36msaveAuthorizationRequest[0;39m
-[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository] [36mredirectUriAfterLogin : null[0;39m
+[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository] [36msaveAuthorizationRequest[0;39m
+[2024-02-13 14:30:42 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository] [36mredirectUriAfterLogin : null[0;39m
 [2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m
 [2024-02-13 14:31:23 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : null[0;39m

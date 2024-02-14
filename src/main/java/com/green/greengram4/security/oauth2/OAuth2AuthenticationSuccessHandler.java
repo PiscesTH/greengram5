@@ -21,13 +21,13 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.Optional;
 
-import static com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
+import static com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-    private final OAuth2AuthenticationRequestCookieRepository repository;
+    private final OAuth2AuthenticationRequestBasedOnCookieRepository repository;
     private final JwtTokenProvider jwtTokenProvider;
     private final AppProperties appProperties;
     private final CookieUtils cookieUtils;

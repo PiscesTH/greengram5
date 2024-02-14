@@ -2,7 +2,7 @@ package com.green.greengram4.security;
 
 import com.green.greengram4.security.oauth2.CustomOAuth2UserService;
 import com.green.greengram4.security.oauth2.OAuth2AuthenticationFailureHandler;
-import com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestCookieRepository;
+import com.green.greengram4.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository;
 import com.green.greengram4.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +21,7 @@ public class SecurityConfiguration {    //인증 & 인가 담당
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final OAuth2AuthenticationFailureHandler failureHandler;
-    private final OAuth2AuthenticationRequestCookieRepository requestCookieRepository;
+    private final OAuth2AuthenticationRequestBasedOnCookieRepository requestCookieRepository;
     private final OAuth2AuthenticationSuccessHandler successHandler;
     private final CustomOAuth2UserService customOAuth2UserService;
 
