@@ -1,6 +1,10 @@
 package com.green.greengram4.user;
 
 import com.green.greengram4.common.*;
+import com.green.greengram4.entity.UserEntity;
+import com.green.greengram4.entity.UserFollowEntity;
+import com.green.greengram4.entity.UserFollowIds;
+import com.green.greengram4.entity.UserFollowRepository;
 import com.green.greengram4.exception.AuthErrorCode;
 import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.security.AuthenticationFacade;
@@ -11,14 +15,16 @@ import com.green.greengram4.user.model.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
+
+import static com.green.greengram4.common.Const.SUCCESS;
 
 @Slf4j
 @Service
@@ -32,37 +38,38 @@ public class UserService {
     private final CookieUtils cookieUtils;
     private final AuthenticationFacade authenticationFacade;
     private final MyFileUtils myFileUtils;
+    //jpa
+    private final UserRepository userRepository;
+    private final UserFollowRepository followRepository;
 
     public ResVo signup(UserSignupDto dto) {
-//        String hasedUpw = BCrypt.hashpw(dto.getUpw(), BCrypt.gensalt());
-        String hasedUpw = passwordEncoder.encode(dto.getUpw());
-        UserSignupProcDto pDto = UserSignupProcDto.builder()
+        UserEntity entity = UserEntity.builder()
+                .providerType(ProviderTypeEnum.LOCAL)
                 .uid(dto.getUid())
+                .upw(passwordEncoder.encode(dto.getUpw()))
                 .nm(dto.getNm())
-                .upw(hasedUpw)
                 .pic(dto.getPic())
+                .role(RoleEnum.USER)
                 .build();
-        int insResult = userMapper.insUser(pDto);
-        return new ResVo(pDto.getIuser());    //회원가입한 iuser pk 값 리턴
+        userRepository.save(entity);    //entity 객체 리턴해줌
+        return new ResVo(entity.getIuser().intValue());
     }
 
     public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
-        UserSigninProcVo procVo = userMapper.selLoginInfoByUid(dto);
-        if (procVo == null) {
-            throw new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID);    //런타임 예외는 throws 없어도 가능 한 듯 ?
-        }
-        if (!passwordEncoder.matches(dto.getUpw(), procVo.getUpw())) {
+        Optional<UserEntity> optEntity = userRepository.findByProviderTypeAndUid(ProviderTypeEnum.LOCAL, dto.getUid());
+        UserEntity entity = optEntity.orElseThrow(() -> new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID));
+
+        if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
             throw new RestApiException(AuthErrorCode.INVALID_PASSWORD);
         }
-
-        MyPrincipal principal = MyPrincipal.builder()
-                .iuser(procVo.getIuser())
+        int iuser = entity.getIuser().intValue();
+        MyPrincipal myPrincipal = MyPrincipal.builder()
+                .iuser(iuser)
                 .build();
-        principal.getRoles().add(procVo.getRole());
-        log.info("principal : {}", principal);
+        myPrincipal.getRoles().add(entity.getRole().name());
 
-        String at = jwtTokenProvider.generateAccessToken(principal);
-        String rt = jwtTokenProvider.generateRefreshToken(principal);
+        String at = jwtTokenProvider.generateAccessToken(myPrincipal);
+        String rt = jwtTokenProvider.generateRefreshToken(myPrincipal);
 
         //cookie에 rt 담는 작업
         int rtCookieMaxAge = appProperties.getJwt().getRefreshCookieMaxAge();
@@ -72,55 +79,62 @@ public class UserService {
 //        HttpSession session = req.getSession(true);
 
         return UserSigninVo.builder()
-                .iuser(procVo.getIuser())
-                .nm(procVo.getNm())
-                .pic(procVo.getPic())
+                .iuser(entity.getIuser().intValue())
+                .nm(entity.getNm())
+                .pic(entity.getPic())
                 .result(Const.LOGIN_SUCCESS)
                 .accessToken(at)
                 .build();
-
     }
 
     public ResVo toggleFollow(UserFollowDto dto) {
-        int delResult = followMapper.delFollow(dto);
-        if (delResult == 1) {
-            return new ResVo(Const.FAIL);
+        UserFollowIds ids = new UserFollowIds();
+        ids.setFromIuser((long) authenticationFacade.getLoginUserPk());
+        ids.setToIuser(dto.getToIuser());
+        Optional<UserFollowEntity> entity = followRepository.findById(ids);
+        UserFollowEntity followEntity = entity.isPresent() ? entity.get() : null;
+
+        if (followEntity == null) {
+            UserFollowEntity userFollowEntity = new UserFollowEntity();
+            userFollowEntity.setUserFollowIds(ids);
+            followRepository.save(userFollowEntity);
+        } else {
+            followRepository.delete(followEntity);
         }
-        try {
-            int insResult = followMapper.insFollow(dto);
-            return new ResVo(Const.SUCCESS);
-        } catch (Exception e) {
-            return new ResVo(Const.FAIL);
-        }
+        return new ResVo(SUCCESS);
     }
 
     public UserInfoVo getUserInfo(UserInfoSelDto dto) {
         return userMapper.selUserInfo(dto);
     }
 
+    @Transactional
     public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) {
-        return new ResVo(userMapper.updUserFirebaseToken(dto));
+        UserEntity entity = userRepository.getReferenceById((long) authenticationFacade.getLoginUserPk());
+        entity.setFirebaseToken(dto.getFirebaseToken());
+//        userRepository.save(entity); 트랜잭션 걸면 save 안해도 됨.
+        return new ResVo(SUCCESS);
     }
 
+    @Transactional
     public UserPicPatchDto patchUserPic(MultipartFile pic) {
-        int iuser = authenticationFacade.getLoginUserPk();
-        String target = "user/" + iuser;
+        Long iuser = (long) authenticationFacade.getLoginUserPk();
+        UserEntity entity = userRepository.getReferenceById(iuser);
+
+        String target = "/user/" + iuser;
         myFileUtils.delFolderTrigger(target);
         String saveFileNm = myFileUtils.transferTo(pic, target);
-        UserPicPatchDto dto = UserPicPatchDto.builder()
-                .iuser(iuser)
+        entity.setPic(saveFileNm);
+
+        return UserPicPatchDto.builder()
+                .iuser(entity.getIuser().intValue())
                 .pic(saveFileNm)
                 .build();
-
-        log.info("pic : {}", saveFileNm);
-        log.info("iuser : {}", dto.getIuser());
-        int result = userMapper.updUserPic(dto);
-        return dto;
     }
 
     public ResVo signout(HttpServletResponse res) {
         cookieUtils.deleteCookie(res, "rt");
-        return new ResVo(Const.SUCCESS);
+        return new ResVo(SUCCESS);
     }
 
     public UserSigninVo getRefreshToken(HttpServletRequest req) {
@@ -146,7 +160,7 @@ public class UserService {
         String at = jwtTokenProvider.generateAccessToken(myPrincipal);
 
         return UserSigninVo.builder()
-                .result(Const.SUCCESS)
+                .result(SUCCESS)
                 .accessToken(at)
                 .build();
     }

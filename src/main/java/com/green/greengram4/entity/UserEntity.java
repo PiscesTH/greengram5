@@ -3,7 +3,10 @@ package com.green.greengram4.entity;
 import com.green.greengram4.common.ProviderTypeEnum;
 import com.green.greengram4.common.RoleEnum;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 @Data
@@ -13,10 +16,13 @@ import org.hibernate.annotations.ColumnDefault;
                 columnNames = {"provider_type", "uid"}
         )
 })   //복합 유니크 걸때 클래스 위에서 함
+@Builder    //실무에서는 entity에 빌더 사용 권장 x
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserEntity extends BaseEntity {
     @Id //pk설정
     @Column(columnDefinition = "BIGINT UNSIGNED")
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment 설정. AUTO -> 시퀀스 사용
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment 설정. AUTO -> DB마다 권장 방식 사용
     private Long iuser;
 
     @Column(name = "provider_type", nullable = false)
@@ -41,4 +47,7 @@ public class UserEntity extends BaseEntity {
     @Enumerated(value = EnumType.STRING)
     @ColumnDefault("'USER'")
     private RoleEnum role;
+
+    @Column(length = 2100)
+    private String firebaseToken;
 }
