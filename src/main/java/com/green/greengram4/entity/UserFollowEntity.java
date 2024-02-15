@@ -7,7 +7,7 @@ import lombok.Data;
 @Entity
 @Table(name = "t_user_follow")
 public class UserFollowEntity extends CreatedAtEntity {
-    @EmbeddedId
+    @EmbeddedId //복합키 설정
     private UserFollowIds userFollowIds;
 
     @ManyToOne(optional = false)    //false 줘야 inner join 가능 ? 없으면 컬럼 증가
@@ -15,7 +15,7 @@ public class UserFollowEntity extends CreatedAtEntity {
     @JoinColumn(name = "from_iuser", columnDefinition = "BIGINT UNSIGNED")
     private UserEntity fromUserEntity;
 
-    @ManyToOne(optional = false)    //관계 설정
+    @ManyToOne(optional = false)    //관계 설정. 외래키 설정
     @MapsId("toIuser")
     @JoinColumn(name = "to_iuser", columnDefinition = "BIGINT UNSIGNED")
     private UserEntity toUserEntity;
