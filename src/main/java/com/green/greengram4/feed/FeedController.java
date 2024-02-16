@@ -33,7 +33,7 @@ public class FeedController {
     @Operation(summary = "전체 피드 조회")
     @GetMapping
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, @PageableDefault(page = 1, size = 20) Pageable pageable) {    //Pageable : 페이징 처리에 사용
-        return service.getAllFeed(dto);
+        return service.getAllFeed(dto, pageable);
     }
 
     @Operation(summary = "좋아요 처리", description = "좋아요 취소 - 0, 등록 - 1")

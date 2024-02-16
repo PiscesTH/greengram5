@@ -121,7 +121,7 @@ class FeedServiceTest {
         when(commentMapper.selFeedCommentAll(commentDto2)).thenReturn(commentVoList2);
 
         FeedSelDto dto = new FeedSelDto();
-        List<FeedSelVo> result = service.getAllFeed(dto);
+        List<FeedSelVo> result = service.getAllFeed2(dto);
 
         assertEquals(list, result);
 

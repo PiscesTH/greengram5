@@ -13,6 +13,7 @@ import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -73,7 +74,7 @@ public class FeedService {
 
     }
 
-    public List<FeedSelVo> getAllFeed(FeedSelDto dto) {
+    public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
         return null;
     }
 

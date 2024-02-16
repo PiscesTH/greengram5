@@ -73,7 +73,7 @@ class FeedControllerTest {
         FeedSelVo feedSelVo = new FeedSelVo();
         feedSelVo.setContents("ㅎㅇ");
         result.add(feedSelVo);
-        given(service.getAllFeed(any())).willReturn(result);
+        given(service.getAllFeed2(any())).willReturn(result);
 
         mvc.perform(
                         MockMvcRequestBuilders.get("/api/feed")
@@ -83,7 +83,7 @@ class FeedControllerTest {
                 .andExpect(content().string(mapper.writeValueAsString(result)))
                 .andDo(print());
 
-        verify(service).getAllFeed(any());
+        verify(service).getAllFeed2(any());
     }
 
     @Test
