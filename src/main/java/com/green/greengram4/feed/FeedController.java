@@ -6,6 +6,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -30,7 +32,7 @@ public class FeedController {
 
     @Operation(summary = "전체 피드 조회")
     @GetMapping
-    public List<FeedSelVo> getAllFeed(FeedSelDto dto) {
+    public List<FeedSelVo> getAllFeed(FeedSelDto dto, @PageableDefault(page = 1, size = 20) Pageable pageable) {    //Pageable : 페이징 처리에 사용
         return service.getAllFeed(dto);
     }
 

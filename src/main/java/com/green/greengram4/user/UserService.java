@@ -23,7 +23,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.green.greengram4.common.Const.FAIL;
 import static com.green.greengram4.common.Const.SUCCESS;
 
 @Slf4j
@@ -91,17 +93,24 @@ public class UserService {
         UserFollowIds ids = new UserFollowIds();
         ids.setFromIuser((long) authenticationFacade.getLoginUserPk());
         ids.setToIuser(dto.getToIuser());
-        Optional<UserFollowEntity> entity = followRepository.findById(ids);
-        UserFollowEntity followEntity = entity.isPresent() ? entity.get() : null;
+        Optional<UserFollowEntity> optEntity = followRepository.findById(ids);
+        UserFollowEntity followEntity = optEntity.orElse(null);
 
-        if (followEntity == null) {
-            UserFollowEntity userFollowEntity = new UserFollowEntity();
-            userFollowEntity.setUserFollowIds(ids);
-            followRepository.save(userFollowEntity);
-        } else {
-            followRepository.delete(followEntity);
-        }
-        return new ResVo(SUCCESS);
+        AtomicInteger atomicInteger = new AtomicInteger(FAIL);
+        optEntity.ifPresentOrElse(
+                followRepository::delete
+                , () -> {
+                    UserFollowEntity saveUserFollowEntity = new UserFollowEntity();
+                    saveUserFollowEntity.setUserFollowIds(ids);
+                    UserEntity fromUserEntity = userRepository.getReferenceById((long) authenticationFacade.getLoginUserPk());
+                    UserEntity toUserEntity = userRepository.getReferenceById(dto.getToIuser());    //모두 다 세팅해서 작업해줘야 함.
+                    saveUserFollowEntity.setFromUserEntity(fromUserEntity);
+                    saveUserFollowEntity.setToUserEntity(toUserEntity);
+                    followRepository.save(saveUserFollowEntity);
+                    atomicInteger.set(SUCCESS);
+                }
+        );
+        return new ResVo(atomicInteger.get());
     }
 
     public UserInfoVo getUserInfo(UserInfoSelDto dto) {
@@ -142,14 +151,14 @@ public class UserService {
         Optional<String> optRt = cookieUtils.getCookie(req, "rt").map(Cookie::getValue);
         if (optRt.isEmpty()) {
             return UserSigninVo.builder()
-                    .result(Const.FAIL)
+                    .result(FAIL)
                     .accessToken(null)
                     .build();
         }
         String token = optRt.get();
         if (!jwtTokenProvider.isValidateToken(token)) {
             return UserSigninVo.builder()
-                    .result(Const.FAIL)
+                    .result(FAIL)
                     .accessToken(null)
                     .build();
         }

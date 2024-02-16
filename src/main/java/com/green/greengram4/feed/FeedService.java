@@ -3,13 +3,18 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.entity.FeedEntity;
+import com.green.greengram4.entity.FeedPicsEntity;
+import com.green.greengram4.entity.UserEntity;
 import com.green.greengram4.exception.FeedErrorCode;
 import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.feed.model.*;
 import com.green.greengram4.security.AuthenticationFacade;
+import com.green.greengram4.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
@@ -25,38 +30,54 @@ public class FeedService {
     private final FeedPicsMapper picsMapper;
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
+
+    private final FeedRepository feedRepository;
+    private final UserRepository userRepository;
+
     private final AuthenticationFacade authenticationFacade;
     private final MyFileUtils myFileUtils;
 
+    @Transactional
     public FeedInsPicDto postFeed(List<MultipartFile> pics, FeedInsDto dto) {
         if (pics == null) {
             throw new RestApiException(FeedErrorCode.PICS_MORE_THEN_ONE);
         }
-        dto.setIuser(authenticationFacade.getLoginUserPk());
-        FeedInsProcDto pDto1 = FeedInsProcDto.builder()
-                .iuser(dto.getIuser())
-                .contents(dto.getContents())
-                .location(dto.getLocation())
-                .build();
-        int feedResult = feedMapper.insFeed(pDto1);
 
-        String target = "/feed/" + pDto1.getIfeed();
-        List<String> savedPics = new ArrayList<>();
-        for (MultipartFile file : pics) {
+        UserEntity userEntity = userRepository.getReferenceById((long)authenticationFacade.getLoginUserPk());
+        FeedEntity feedEntity = new FeedEntity();
+        feedEntity.setUserEntity(userEntity);
+        feedEntity.setContents(dto.getContents());
+        feedEntity.setLocation(dto.getLocation());
+        feedRepository.save(feedEntity);
+
+        String target = "/feed/" + feedEntity.getIfeed();
+
+        FeedInsPicDto pDto = FeedInsPicDto.builder()
+                .ifeed(feedEntity.getIfeed().intValue())
+                .pics(new ArrayList<>())
+                .build();
+        for(MultipartFile file : pics) {
             String saveFileNm = myFileUtils.transferTo(file, target);
-            savedPics.add(saveFileNm);
+            pDto.getPics().add(saveFileNm);
         }
+        List<FeedPicsEntity> feedPicsEntityList = pDto.getPics()
+                .stream()
+                .map(item -> FeedPicsEntity.builder()
+                        .feedEntity(feedEntity)
+                        .pic(item)
+                        .build()
+                ).toList();
+        feedEntity.getFeedPicsEntityList().addAll(feedPicsEntityList);
 
-        FeedInsPicDto pDto2 = FeedInsPicDto.builder()
-                .ifeed(pDto1.getIfeed())
-                .pics(savedPics)
-                .build();
-        int picsResult = picsMapper.insPic(pDto2);
+        return pDto;
 
-        return pDto2;
     }
 
     public List<FeedSelVo> getAllFeed(FeedSelDto dto) {
+        return null;
+    }
+
+    public List<FeedSelVo> getAllFeed2(FeedSelDto dto) {
         List<FeedSelVo> resultVo = feedMapper.selAllFeed(dto);
         Map<Integer, FeedSelVo> map = new HashMap<>();
         //Map<Integer, FeedSelVo> map = resultVo.stream().collect(Collectors.toMap(FeedSelVo::getIfeed, FeedSelVo::getSelf));
@@ -100,8 +121,8 @@ public class FeedService {
     }
 
     public ResVo delFeed(FeedDelDto dto) {
-            int delProcResult = feedMapper.delFeedProc(dto);
-            int delResult = feedMapper.delFeed(dto);
-            return new ResVo(delResult);
+        int delProcResult = feedMapper.delFeedProc(dto);
+        int delResult = feedMapper.delFeed(dto);
+        return new ResVo(delResult);
     }
 }

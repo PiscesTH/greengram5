@@ -10,9 +10,10 @@ import lombok.Data;
 public class UserSigninDto {
     @Schema(defaultValue = "hubble")
     private String uid;
-    @Schema(defaultValue = "112233")
+    @Schema(defaultValue = "xptmxm12")
     private String upw;
     @JsonIgnore
     private int iuser;
+    @Schema(defaultValue = "LOCAL")
     private String providerType;
 }
