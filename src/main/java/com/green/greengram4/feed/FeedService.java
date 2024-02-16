@@ -44,7 +44,9 @@ public class FeedService {
             throw new RestApiException(FeedErrorCode.PICS_MORE_THEN_ONE);
         }
 
-        UserEntity userEntity = userRepository.getReferenceById((long)authenticationFacade.getLoginUserPk());
+        UserEntity userEntity = userRepository.getReferenceById((long) authenticationFacade.getLoginUserPk());
+//        UserEntity userEntity = new UserEntity();
+//        userEntity.setIuser((long)authenticationFacade.getLoginUserPk()); 비영속 상태로도 작동 한다.
         FeedEntity feedEntity = new FeedEntity();
         feedEntity.setUserEntity(userEntity);
         feedEntity.setContents(dto.getContents());
@@ -57,7 +59,7 @@ public class FeedService {
                 .ifeed(feedEntity.getIfeed().intValue())
                 .pics(new ArrayList<>())
                 .build();
-        for(MultipartFile file : pics) {
+        for (MultipartFile file : pics) {
             String saveFileNm = myFileUtils.transferTo(file, target);
             pDto.getPics().add(saveFileNm);
         }
@@ -75,6 +77,12 @@ public class FeedService {
     }
 
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
+        List<FeedSelVo> list = null;
+        if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
+            UserEntity userEntity = new UserEntity();
+            userEntity.setIuser((long) dto.getTargetIuser());
+            feedRepository.findAllByUserEntityOrderByIfeedDesc(userEntity, pageable);
+        }
         return null;
     }
 
