@@ -43,7 +43,7 @@ public class SecurityConfiguration {    //인증 & 인가 담당
                                 .authenticated()
                                 .requestMatchers(HttpMethod.GET, "/api/user").authenticated()
                                 .requestMatchers(HttpMethod.PATCH, "/api/user/pic").authenticated()
-                                .requestMatchers(HttpMethod.GET, "/api/feed/fav").hasAnyRole("ADMIN")
+                                //.requestMatchers(HttpMethod.GET, "/api/feed/fav").hasAnyRole("ADMIN")
                                 //.requestMatchers(HttpMethod.GET, "/product/**").permitAll() //해당 주소값의 get요청만 허용
                                 //.requestMatchers(HttpMethod.POST, "/product/**").permitAll() //해당 주소값의 post요청만 허용
                                 //.requestMatchers("/todo-api").hasAnyRole("USER", "ADMIN")   //해당 요청 가능한 권한(역할) 지정
