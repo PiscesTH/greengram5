@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface FeedRepository extends JpaRepository<FeedEntity, Long> {
     List<FeedEntity> findAllByUserEntityOrderByIfeedDesc(UserEntity userEntity, Pageable pageable);
+    //멤버필드명 적어야 함.
 }

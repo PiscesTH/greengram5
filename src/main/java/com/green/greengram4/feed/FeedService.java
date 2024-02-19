@@ -77,13 +77,27 @@ public class FeedService {
     }
 
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
-        List<FeedSelVo> list = null;
+        List<FeedEntity> list = null;
         if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
             UserEntity userEntity = new UserEntity();
             userEntity.setIuser((long) dto.getTargetIuser());
-            feedRepository.findAllByUserEntityOrderByIfeedDesc(userEntity, pageable);
+            list = feedRepository.findAllByUserEntityOrderByIfeedDesc(userEntity, pageable);
         }
-        return null;
+        return list == null ?
+                new ArrayList<>() :
+                list.stream().map(item -> {
+                    int x = 0;
+                    return FeedSelVo.builder()
+                            .ifeed(item.getIfeed().intValue())
+                            .contents(item.getContents())
+                            .location(item.getLocation())
+                            .createdAt(item.getContents().toString())
+                            .writerIuser(item.getUserEntity().getIuser().intValue())
+                            .writerNm(item.getUserEntity().getNm())
+                            .writerPic(item.getUserEntity().getPic())
+
+                            .build();
+                }).toList();
     }
 
     public List<FeedSelVo> getAllFeed2(FeedSelDto dto) {

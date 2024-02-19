@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @Data
 @MappedSuperclass   //상속받아도 빼면 안됨.
 @EntityListeners(AuditingEntityListener.class)  //listener : 이벤트, main method에 어노테이션 추가해야함
+//db에서 created_at 에 기본값 넣은 것과 같은 효과. java에서 해결하는 방법.
 public class BaseEntity extends CreatedAtEntity {
 //    @CreatedDate
 //    @Column(updatable = false, nullable = false)  //수정 불가능
