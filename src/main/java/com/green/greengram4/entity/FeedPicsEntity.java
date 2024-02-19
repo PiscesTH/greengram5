@@ -19,7 +19,7 @@ public class FeedPicsEntity extends CreatedAtEntity {
     private Long ifeedPics;
 
     @ManyToOne
-    @JoinColumn(name = "ifeed", columnDefinition = "BIGINT UNSIGNED", nullable = false)
+    @JoinColumn(name = "ifeed", nullable = false)
     private FeedEntity feedEntity;
 
     @Column(length = 2100, nullable = false)

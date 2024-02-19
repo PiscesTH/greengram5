@@ -19,8 +19,8 @@ public class FeedEntity extends BaseEntity{
     private Long ifeed;
 
     @ManyToOne
-    @JoinColumn(name = "iuser", referencedColumnName = "iuser", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "iuser", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
     private UserEntity userEntity;
 
     @Column(length = 1000)

@@ -12,7 +12,7 @@ public class FeedCommentEntity extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ifeedComment;
 
-    @ManyToOne
+    @ManyToOne//(fetch = FetchType.EAGER) -> 기본값. (fetch = FetchType.LAZY) -> 지연 로딩
     @JoinColumn(name = "ifeed", nullable = false)
     private FeedEntity feedEntity;
 

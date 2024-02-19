@@ -3,6 +3,7 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.entity.FeedCommentEntity;
 import com.green.greengram4.entity.FeedEntity;
 import com.green.greengram4.entity.FeedPicsEntity;
 import com.green.greengram4.entity.UserEntity;
@@ -34,6 +35,7 @@ public class FeedService {
 
     private final FeedRepository feedRepository;
     private final UserRepository userRepository;
+    private final FeedCommentRepository commentRepository;
 
     private final AuthenticationFacade authenticationFacade;
     private final MyFileUtils myFileUtils;
@@ -76,6 +78,7 @@ public class FeedService {
 
     }
 
+
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
         List<FeedEntity> list = null;
         if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
@@ -86,16 +89,25 @@ public class FeedService {
         return list == null ?
                 new ArrayList<>() :
                 list.stream().map(item -> {
-                    int x = 0;
+                    List<FeedCommentEntity> commentEntityList = commentRepository.findAllTop4ByFeedEntity(item);
+                    List<FeedSelCommentVo> commentsList = commentEntityList.stream()
+                            .map(cmt -> FeedSelCommentVo.builder()
+                                    .ifeedComment(cmt.getIfeedComment().intValue())
+                                    .comment(cmt.getComment())
+                                    .createdAt(cmt.getCreatedAt().toString())
+                                    .writerIuser(cmt.getUserEntity().getIuser().intValue())
+                                    .writerNm(cmt.getUserEntity().getNm())
+                                    .writerPic(cmt.getUserEntity().getPic())
+                                    .build()).toList();
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .contents(item.getContents())
                             .location(item.getLocation())
-                            .createdAt(item.getContents().toString())
+                            .createdAt(item.getCreatedAt().toString())
                             .writerIuser(item.getUserEntity().getIuser().intValue())
                             .writerNm(item.getUserEntity().getNm())
                             .writerPic(item.getUserEntity().getPic())
-
+                            .comments(commentsList)
                             .build();
                 }).toList();
     }
