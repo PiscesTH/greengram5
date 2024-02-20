@@ -99,6 +99,12 @@ public class FeedService {
                                     .writerNm(cmt.getUserEntity().getNm())
                                     .writerPic(cmt.getUserEntity().getPic())
                                     .build()).toList();
+                    int isMoreComment = 0;
+                    if (commentsList.size() == 4) {
+                        isMoreComment++;
+                        commentsList = new ArrayList<>(commentsList);
+                        commentsList.remove(commentsList.size() - 1);
+                    }
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .contents(item.getContents())
@@ -108,6 +114,7 @@ public class FeedService {
                             .writerNm(item.getUserEntity().getNm())
                             .writerPic(item.getUserEntity().getPic())
                             .comments(commentsList)
+                            .isMoreComment(isMoreComment)
                             .build();
                 }).toList();
     }
