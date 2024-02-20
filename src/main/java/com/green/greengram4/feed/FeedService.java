@@ -3,10 +3,7 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
-import com.green.greengram4.entity.FeedCommentEntity;
-import com.green.greengram4.entity.FeedEntity;
-import com.green.greengram4.entity.FeedPicsEntity;
-import com.green.greengram4.entity.UserEntity;
+import com.green.greengram4.entity.*;
 import com.green.greengram4.exception.FeedErrorCode;
 import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.feed.model.*;
@@ -33,9 +30,10 @@ public class FeedService {
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
 
-    private final FeedRepository feedRepository;
     private final UserRepository userRepository;
+    private final FeedRepository feedRepository;
     private final FeedCommentRepository commentRepository;
+    private final FeedFavRepository favRepository;
 
     private final AuthenticationFacade authenticationFacade;
     private final MyFileUtils myFileUtils;
@@ -109,6 +107,11 @@ public class FeedService {
                     List<FeedPicsEntity> picsList = item.getFeedPicsEntityList();
                     List<String> pics = picsList.stream().map(FeedPicsEntity::getPic).toList();
 
+                    FeedFavIds feedFavIds = new FeedFavIds();
+                    feedFavIds.setIuser((long)authenticationFacade.getLoginUserPk());
+                    feedFavIds.setIfeed(item.getIfeed());
+                    int isFav = favRepository.findById(feedFavIds).isPresent() ? 1 : 0;
+
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .contents(item.getContents())
@@ -120,6 +123,7 @@ public class FeedService {
                             .comments(commentsList)
                             .isMoreComment(isMoreComment)
                             .pics(pics)
+                            .isFav(isFav)
                             .build();
                 }).toList();
     }

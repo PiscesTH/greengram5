@@ -1733,3 +1733,523 @@ org.hibernate.LazyInitializationException: failed to lazily initialize a collect
 [2024-02-20 10:44:46 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
 [2024-02-20 10:44:46 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2024-02-20 10:44:46 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-02-20 10:44:49 [32mINFO [0;39m background-preinit] [org.hibernate.validator.internal.util.Version] [36mHV000001: Hibernate Validator 8.0.1.Final[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 10372 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 10:44:50 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1159 ms[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.4.1.Final[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection org.mariadb.jdbc.Connection@7817cfb2[0;39m
+[2024-02-20 10:44:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-02-20 10:44:52 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 10:44:53 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 10:44:53 [32mINFO [0;39m restartedMain] [com.green.greengram4.common.FirebaseConfiguration] [36mFirebaseApp Initialization Complete !!![0;39m
+[2024-02-20 10:44:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 10:44:53 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67d91106, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7338a571, org.springframework.security.web.context.SecurityContextHolderFilter@101e293, org.springframework.security.web.header.HeaderWriterFilter@40c835d2, org.springframework.web.filter.CorsFilter@768a78c0, org.springframework.security.web.authentication.logout.LogoutFilter@180a84d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@59102437, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4edb45c1, com.green.greengram4.security.JwtAuthenticationFilter@137bdae9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fa3c52e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15bb1255, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fc62dc, org.springframework.security.web.session.SessionManagementFilter@47cd8c85, org.springframework.security.web.access.ExceptionTranslationFilter@681b20c0, org.springframework.security.web.access.intercept.AuthorizationFilter@309b756][0;39m
+[2024-02-20 10:44:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 10:44:54 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 10:44:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 10:44:54 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 4.356 seconds (process running for 4.81)[0;39m
+[2024-02-20 10:44:58 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-02-20 10:44:58 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-02-20 10:44:58 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-02-20 10:44:58 [32mINFO [0;39m http-nio-8082-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjoxLFwicm9sZXNcIjpbXCJVU0VSXCJdfSIsImlhdCI6MTcwODM5MDIzMywiZXhwIjoxNzA4Mzk3NDMzfQ.L6UFxxduzcik96-O9ihD8qK5r7aAFGjxSZM8gqSzXrg[0;39m
+[2024-02-20 10:44:58 [33mWARN [0;39m http-nio-8082-exec-1] [com.green.greengram4.exception.GlobalExceptionHandler] [36mhandleException[0;39m
+org.springframework.dao.InvalidDataAccessApiUsageException: Unable to locate Attribute with the given name [FeedPicsEntity] on this ManagedType [com.green.greengram4.entity.FeedEntity]
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:371)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy4/jdk.proxy4.$Proxy177.findAllByUserEntityOrderByIfeedDesc(Unknown Source)
+	at com.green.greengram4.feed.FeedService.getAllFeed(FeedService.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.green.greengram4.feed.FeedService$$SpringCGLIB$$0.getAllFeed(<generated>)
+	at com.green.greengram4.feed.FeedController.getAllFeed(FeedController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.green.greengram4.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.IllegalArgumentException: Unable to locate Attribute with the given name [FeedPicsEntity] on this ManagedType [com.green.greengram4.entity.FeedEntity]
+	at org.hibernate.metamodel.model.domain.AbstractManagedType.checkNotNull(AbstractManagedType.java:225)
+	at org.hibernate.metamodel.model.domain.AbstractManagedType.getAttribute(AbstractManagedType.java:148)
+	at org.hibernate.graph.spi.GraphImplementor.findOrCreateAttributeNode(GraphImplementor.java:77)
+	at org.hibernate.graph.internal.AbstractGraph.addAttributeNode(AbstractGraph.java:150)
+	at org.hibernate.graph.internal.AbstractGraph.addAttributeNode(AbstractGraph.java:34)
+	at org.hibernate.graph.RootGraph.addAttributeNodes(RootGraph.java:45)
+	at org.springframework.data.jpa.repository.query.Jpa21Utils.createGraph(Jpa21Utils.java:168)
+	at org.springframework.data.jpa.repository.query.Jpa21Utils.configureFetchGraphFrom(Jpa21Utils.java:155)
+	at org.springframework.data.jpa.repository.query.Jpa21Utils.createDynamicEntityGraph(Jpa21Utils.java:134)
+	at org.springframework.data.jpa.repository.query.Jpa21Utils.tryGetFetchGraph(Jpa21Utils.java:112)
+	at org.springframework.data.jpa.repository.query.Jpa21Utils.getFetchGraphHint(Jpa21Utils.java:76)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.applyEntityGraphConfiguration(AbstractJpaQuery.java:255)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:239)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 125 common frames omitted
+[2024-02-20 10:44:58 [33mWARN [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.dao.InvalidDataAccessApiUsageException: Unable to locate Attribute with the given name [FeedPicsEntity] on this ManagedType [com.green.greengram4.entity.FeedEntity]][0;39m
+[2024-02-20 10:45:56 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)[0;39m
+[2024-02-20 10:45:56 [32mINFO [0;39m Thread-5] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 10:45:56 [32mINFO [0;39m Thread-5] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 10:45:56 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 10372 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 308 ms[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Starting...[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-2 - Added connection org.mariadb.jdbc.Connection@44a071fd[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Start completed.[0;39m
+[2024-02-20 10:45:57 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a55c88a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bff9cfa, org.springframework.security.web.context.SecurityContextHolderFilter@315b2326, org.springframework.security.web.header.HeaderWriterFilter@17fa1945, org.springframework.web.filter.CorsFilter@2b3b84db, org.springframework.security.web.authentication.logout.LogoutFilter@a81c23e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4bd95e44, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@48d77735, com.green.greengram4.security.JwtAuthenticationFilter@180acacd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34ddfdba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@732aea55, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58a63056, org.springframework.security.web.session.SessionManagementFilter@5788d315, org.springframework.security.web.access.ExceptionTranslationFilter@60dcabfc, org.springframework.security.web.access.intercept.AuthorizationFilter@75b6eed3][0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.418 seconds (process running for 69.237)[0;39m
+[2024-02-20 10:45:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m Thread-7] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m Thread-7] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown initiated...[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown completed.[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 10372 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:18:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 316 ms[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Starting...[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-3 - Added connection org.mariadb.jdbc.Connection@43a049cb[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Start completed.[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:18:02 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12f78f95, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d2301bc, org.springframework.security.web.context.SecurityContextHolderFilter@35a3a1d, org.springframework.security.web.header.HeaderWriterFilter@7c809fa, org.springframework.web.filter.CorsFilter@4c2881ac, org.springframework.security.web.authentication.logout.LogoutFilter@1ec0746, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3d6647b0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@63842f9d, com.green.greengram4.security.JwtAuthenticationFilter@6f9a6f76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72436247, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3583322c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e92b773, org.springframework.security.web.session.SessionManagementFilter@269522b9, org.springframework.security.web.access.ExceptionTranslationFilter@10ac2891, org.springframework.security.web.access.intercept.AuthorizationFilter@75709e56][0;39m
+[2024-02-20 11:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:18:03 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:18:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.327 seconds (process running for 1993.815)[0;39m
+[2024-02-20 11:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m Thread-11] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m Thread-11] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m Thread-11] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Shutdown initiated...[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m Thread-11] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Shutdown completed.[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 10372 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 307 ms[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Starting...[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-4 - Added connection org.mariadb.jdbc.Connection@3da82362[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Start completed.[0;39m
+[2024-02-20 11:18:04 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4744ba2b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54b7638a, org.springframework.security.web.context.SecurityContextHolderFilter@42849d7d, org.springframework.security.web.header.HeaderWriterFilter@37792606, org.springframework.web.filter.CorsFilter@47e53a2f, org.springframework.security.web.authentication.logout.LogoutFilter@5d10d602, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6c6fe1e8, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1f5d9312, com.green.greengram4.security.JwtAuthenticationFilter@5026df5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43a652e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d111581, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34d3e4c2, org.springframework.security.web.session.SessionManagementFilter@17f23f9d, org.springframework.security.web.access.ExceptionTranslationFilter@318604ac, org.springframework.security.web.access.intercept.AuthorizationFilter@19d82339][0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.303 seconds (process running for 1996.586)[0;39m
+[2024-02-20 11:18:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:18:10 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:18:10 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Shutdown initiated...[0;39m
+[2024-02-20 11:18:10 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Shutdown completed.[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m background-preinit] [org.hibernate.validator.internal.util.Version] [36mHV000001: Hibernate Validator 8.0.1.Final[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 5424 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:42:16 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1185 ms[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.4.1.Final[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection org.mariadb.jdbc.Connection@7a62022f[0;39m
+[2024-02-20 11:42:17 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-02-20 11:42:18 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:42:19 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:42:19 [32mINFO [0;39m restartedMain] [com.green.greengram4.common.FirebaseConfiguration] [36mFirebaseApp Initialization Complete !!![0;39m
+[2024-02-20 11:42:19 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:42:19 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46a82e34, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ce35fd9, org.springframework.security.web.context.SecurityContextHolderFilter@26712b3d, org.springframework.security.web.header.HeaderWriterFilter@1dd601f7, org.springframework.web.filter.CorsFilter@386730ef, org.springframework.security.web.authentication.logout.LogoutFilter@9339559, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@7dcdd89a, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4553e850, com.green.greengram4.security.JwtAuthenticationFilter@76440812, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@99b2838, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45398a6b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27bc0340, org.springframework.security.web.session.SessionManagementFilter@24693992, org.springframework.security.web.access.ExceptionTranslationFilter@7e0b0d4f, org.springframework.security.web.access.intercept.AuthorizationFilter@202c2999][0;39m
+[2024-02-20 11:42:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:42:20 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:42:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:42:20 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 4.44 seconds (process running for 4.879)[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m Thread-5] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m Thread-5] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 5424 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:44:37 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 315 ms[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Starting...[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-2 - Added connection org.mariadb.jdbc.Connection@10cd1b33[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Start completed.[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:44:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21ed53c9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65d48229, org.springframework.security.web.context.SecurityContextHolderFilter@60fb4b8a, org.springframework.security.web.header.HeaderWriterFilter@43a3df27, org.springframework.web.filter.CorsFilter@454e3d83, org.springframework.security.web.authentication.logout.LogoutFilter@25a069da, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@347e0075, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5da4237c, com.green.greengram4.security.JwtAuthenticationFilter@1aa054e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e3dcd15, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73ba6512, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@398d5995, org.springframework.security.web.session.SessionManagementFilter@311bae0f, org.springframework.security.web.access.ExceptionTranslationFilter@a989202, org.springframework.security.web.access.intercept.AuthorizationFilter@4587364f][0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.395 seconds (process running for 143.811)[0;39m
+[2024-02-20 11:44:39 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m Thread-7] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m Thread-7] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown initiated...[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown completed.[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 5424 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 300 ms[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Starting...[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-3 - Added connection org.mariadb.jdbc.Connection@1ffbbd5c[0;39m
+[2024-02-20 11:44:40 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Start completed.[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@61f4b58b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72736932, org.springframework.security.web.context.SecurityContextHolderFilter@98411d4, org.springframework.security.web.header.HeaderWriterFilter@391a512c, org.springframework.web.filter.CorsFilter@7ceffcf6, org.springframework.security.web.authentication.logout.LogoutFilter@64c76e10, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@21764c53, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@55410555, com.green.greengram4.security.JwtAuthenticationFilter@756d1c8a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e018be1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75f92a3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21d93593, org.springframework.security.web.session.SessionManagementFilter@538d6507, org.springframework.security.web.access.ExceptionTranslationFilter@64de799c, org.springframework.security.web.access.intercept.AuthorizationFilter@4a9fd3cd][0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.34 seconds (process running for 146.62)[0;39m
+[2024-02-20 11:44:41 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m Thread-11] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m Thread-11] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m Thread-11] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Shutdown initiated...[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m Thread-11] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Shutdown completed.[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 5424 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 19 ms. Found 5 JPA repository interfaces.[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 369 ms[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Starting...[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-4 - Added connection org.mariadb.jdbc.Connection@5b3bc2cc[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Start completed.[0;39m
+[2024-02-20 11:58:20 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7357d9ca, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f79b12d, org.springframework.security.web.context.SecurityContextHolderFilter@2a4275a, org.springframework.security.web.header.HeaderWriterFilter@2fe806d6, org.springframework.web.filter.CorsFilter@713be898, org.springframework.security.web.authentication.logout.LogoutFilter@35ca919a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1ba6e3c1, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1e8dd1d7, com.green.greengram4.security.JwtAuthenticationFilter@453f05da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d69c6ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4258ab20, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c88c01, org.springframework.security.web.session.SessionManagementFilter@3f68a72, org.springframework.security.web.access.ExceptionTranslationFilter@47fd03e0, org.springframework.security.web.access.intercept.AuthorizationFilter@7a81fb4a][0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.424 seconds (process running for 966.438)[0;39m
+[2024-02-20 11:58:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m Thread-15] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m Thread-15] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m Thread-15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Shutdown initiated...[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m Thread-15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-4 - Shutdown completed.[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarting Greengram5Application using Java 17.0.8.1 with PID 5424 (D:\Students\kth\greengram5\build\classes\java\main started by Administrator in D:\Students\kth\greengram5)[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 291 ms[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-5 - Starting...[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-5 - Added connection org.mariadb.jdbc.Connection@3079c778[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-5 - Start completed.[0;39m
+[2024-02-20 11:58:23 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56155ed3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43cb9520, org.springframework.security.web.context.SecurityContextHolderFilter@23bf0a74, org.springframework.security.web.header.HeaderWriterFilter@525b8a1f, org.springframework.web.filter.CorsFilter@10c51213, org.springframework.security.web.authentication.logout.LogoutFilter@7b30eb7b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@435ad23b, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@60b8abe8, com.green.greengram4.security.JwtAuthenticationFilter@6ebfe2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56e03931, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58e55a80, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35070c08, org.springframework.security.web.session.SessionManagementFilter@1d4caacb, org.springframework.security.web.access.ExceptionTranslationFilter@4a87e5af, org.springframework.security.web.access.intercept.AuthorizationFilter@5e0d02de][0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram5Application] [36mStarted Greengram5Application in 1.302 seconds (process running for 969.214)[0;39m
+[2024-02-20 11:58:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-20 11:59:52 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-02-20 11:59:52 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-02-20 11:59:52 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-02-20 11:59:52 [32mINFO [0;39m http-nio-8082-exec-1] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjoxLFwicm9sZXNcIjpbXCJVU0VSXCJdfSIsImlhdCI6MTcwODM5MDIzMywiZXhwIjoxNzA4Mzk3NDMzfQ.L6UFxxduzcik96-O9ihD8qK5r7aAFGjxSZM8gqSzXrg[0;39m
+[2024-02-20 12:00:01 [32mINFO [0;39m http-nio-8082-exec-3] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjoxLFwicm9sZXNcIjpbXCJVU0VSXCJdfSIsImlhdCI6MTcwODM5MDIzMywiZXhwIjoxNzA4Mzk3NDMzfQ.L6UFxxduzcik96-O9ihD8qK5r7aAFGjxSZM8gqSzXrg[0;39m
+[2024-02-20 12:00:02 [32mTRACE[0;39m http-nio-8082-exec-3] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_user ue1_0 where ue1_0.provider_type=? and ue1_0.uid=?[0;39m
+[2024-02-20 12:00:02 [32mTRACE[0;39m http-nio-8082-exec-3] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:ENUM) <- [LOCAL][0;39m
+[2024-02-20 12:00:02 [32mTRACE[0;39m http-nio-8082-exec-3] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:VARCHAR) <- [hubble][0;39m
+[2024-02-20 12:00:19 [32mINFO [0;39m http-nio-8082-exec-2] [com.green.greengram4.security.JwtAuthenticationFilter] [36mtoken : eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoie1wiaXVzZXJcIjoxLFwicm9sZXNcIjpbXCJVU0VSXCJdfSIsImlhdCI6MTcwODM5ODAwMiwiZXhwIjoxNzA4NDA1MjAyfQ.l4hQ8P-fdh6vW1rO1aEYZj5PaIqu8_29-6zxEXKmMMY[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed fe1_0 join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser where fe1_0.iuser=? order by fe1_0.ifeed desc limit ?,?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [2][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:INTEGER) <- [0][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (3:INTEGER) <- [20][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [26][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [26][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#26][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [26][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [24][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [24][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#24][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [24][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [22][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [22][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#22][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [22][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [21][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [21][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#21][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [21][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [20][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [20][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#20][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [20][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [19][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [19][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#19][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [19][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [18][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [18][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#18][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [18][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fce1_0.ifeed_comment,fce1_0.comment,fce1_0.created_at,fce1_0.ifeed,fce1_0.updated_at,fce1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw from t_feed_comment fce1_0 join t_user ue1_0 on ue1_0.iuser=fce1_0.iuser where fce1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [17][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select fpel1_0.ifeed,fpel1_0.ifeed_pics,fpel1_0.created_at,fpel1_0.pic from t_feed_pics fpel1_0 where fpel1_0.ifeed=?[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [17][0;39m
+[2024-02-20 12:00:19 [32mDEBUG[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.internal.ResultsHelper] [36mCollection fully initialized: [com.green.greengram4.entity.FeedEntity.feedPicsEntityList#17][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess] [36mExecuting query to retrieve ResultSet : select ffe1_0.ifeed,ffe1_0.iuser,ffe1_0.created_at,fe1_0.ifeed,fe1_0.contents,fe1_0.created_at,fe1_0.location,fe1_0.updated_at,fe1_0.iuser,ue1_0.iuser,ue1_0.created_at,ue1_0.firebase_token,ue1_0.nm,ue1_0.pic,ue1_0.provider_type,ue1_0.role,ue1_0.uid,ue1_0.updated_at,ue1_0.upw,ue2_0.iuser,ue2_0.created_at,ue2_0.firebase_token,ue2_0.nm,ue2_0.pic,ue2_0.provider_type,ue2_0.role,ue2_0.uid,ue2_0.updated_at,ue2_0.upw from t_feed_fav ffe1_0 join t_feed fe1_0 on fe1_0.ifeed=ffe1_0.ifeed left join t_user ue1_0 on ue1_0.iuser=fe1_0.iuser join t_user ue2_0 on ue2_0.iuser=ffe1_0.iuser where (ffe1_0.ifeed,ffe1_0.iuser) in ((?,?))[0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (1:BIGINT) <- [17][0;39m
+[2024-02-20 12:00:19 [32mTRACE[0;39m http-nio-8082-exec-2] [org.hibernate.orm.jdbc.bind] [36mbinding parameter (2:BIGINT) <- [1][0;39m
+[2024-02-20 12:09:44 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-20 12:09:44 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-5 - Shutdown initiated...[0;39m
+[2024-02-20 12:09:44 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-5 - Shutdown completed.[0;39m
