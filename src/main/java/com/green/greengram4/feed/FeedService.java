@@ -78,7 +78,7 @@ public class FeedService {
 
     }
 
-
+    @Transactional
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
         List<FeedEntity> list = null;
         if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
@@ -105,6 +105,10 @@ public class FeedService {
                         commentsList = new ArrayList<>(commentsList);
                         commentsList.remove(commentsList.size() - 1);
                     }
+
+                    List<FeedPicsEntity> picsList = item.getFeedPicsEntityList();
+                    List<String> pics = picsList.stream().map(FeedPicsEntity::getPic).toList();
+
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .contents(item.getContents())
@@ -115,6 +119,7 @@ public class FeedService {
                             .writerPic(item.getUserEntity().getPic())
                             .comments(commentsList)
                             .isMoreComment(isMoreComment)
+                            .pics(pics)
                             .build();
                 }).toList();
     }
