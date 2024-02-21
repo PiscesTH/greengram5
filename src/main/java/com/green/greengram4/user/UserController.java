@@ -1,5 +1,6 @@
 package com.green.greengram4.user;
 
+import com.green.greengram4.common.ProviderTypeEnum;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.user.model.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -27,7 +28,7 @@ public class UserController {
     @PostMapping("/signin")
     public UserSigninVo postSignin(HttpServletResponse res,
                                    @RequestBody UserSigninDto dto) {
-        return service.signin(res, dto);
+        return service.signin(ProviderTypeEnum.LOCAL ,res, dto);
     }
 
     @PostMapping("/signout")

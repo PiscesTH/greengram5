@@ -22,21 +22,27 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
+    //query dsl
+    annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+    //plugins의 id 'io.spring.dependency-management' version '1.1.4' 가 있어서 사용가능. ${dependencyManagement.importedProperties['querydsl.version']} = 5.1.0
+    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+    //---------
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
     testImplementation 'org.springframework.security:spring-security-test'
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
     // https://mvnrepository.com/artifact/com.google.firebase/firebase-admin
     implementation 'com.google.firebase:firebase-admin:9.2.0'
     //swagger library
@@ -59,8 +65,24 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     //jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //query dsl
+    implementation 'com.querydsl:querydsl-jpa:5.1.0:jakarta'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+//query dsl
+def generated = 'src/main/generated'    //변수 선언
+
+tasks.withType(JavaCompile).configureEach {
+    options.getGeneratedSourceOutputDirectory().set(file(generated))    //큐클래스 만들어지는 위치
+}
+
+sourceSets {
+    main.java.srcDirs += [generated]    //큐클래스 사용할 수 있도록 디펜던시 연결
+}
+
+
+clean { delete file(generated) }    //큐클래스 삭제때 사용
+//---------

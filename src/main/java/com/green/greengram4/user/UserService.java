@@ -57,8 +57,8 @@ public class UserService {
         return new ResVo(entity.getIuser().intValue());
     }
 
-    public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
-        Optional<UserEntity> optEntity = userRepository.findByProviderTypeAndUid(ProviderTypeEnum.LOCAL, dto.getUid());
+    public UserSigninVo signin(ProviderTypeEnum providerTypeEnum, HttpServletResponse res, UserSigninDto dto) {
+        Optional<UserEntity> optEntity = userRepository.findByProviderTypeAndUid(providerTypeEnum, dto.getUid());
         UserEntity entity = optEntity.orElseThrow(() -> new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID));
 
         if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
