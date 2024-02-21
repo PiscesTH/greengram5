@@ -11,10 +11,11 @@ import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+
+import org.springframework.data.domain.Pageable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,6 +79,16 @@ public class FeedService {
 
     @Transactional
     public List<FeedSelVo> getAllFeed(FeedSelDto dto, Pageable pageable) {
+        List<FeedSelVo> list = feedRepository.selFeedAll(
+                authenticationFacade.getLoginUserPk(),
+                dto.getTargetIuser(),
+                pageable
+        );
+        return list;
+    }
+
+    @Transactional
+    public List<FeedSelVo> getAllFeed3(FeedSelDto dto, Pageable pageable) {
         List<FeedEntity> list = null;
         if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
             UserEntity userEntity = new UserEntity();
@@ -108,7 +119,7 @@ public class FeedService {
                     List<String> pics = picsList.stream().map(FeedPicsEntity::getPic).toList();
 
                     FeedFavIds feedFavIds = new FeedFavIds();
-                    feedFavIds.setIuser((long)authenticationFacade.getLoginUserPk());
+                    feedFavIds.setIuser((long) authenticationFacade.getLoginUserPk());
                     feedFavIds.setIfeed(item.getIfeed());
                     int isFav = favRepository.findById(feedFavIds).isPresent() ? 1 : 0;
 
