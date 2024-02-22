@@ -12,5 +12,5 @@ import java.util.List;
 public interface FeedCommentMapper {
     int insFeedComment(FeedInsCommentDto dto);
     List<FeedSelCommentVo> selFeedCommentAll(FeedSelCommentDto dto);
-    List<FeedSelCommentVo> selFeedCommentTop4(List<FeedEntity> entityList);
+    List<FeedSelCommentVo> selFeedCommentTop4(List<FeedEntity> list);
 }

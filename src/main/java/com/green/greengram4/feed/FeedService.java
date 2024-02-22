@@ -87,8 +87,12 @@ public class FeedService {
         List<FeedFavEntity> favList = dto.getIsFavList() == 1 ? null : feedRepository.selFeedMyFavAll(list, dto.getLoginedIuser());
         List<FeedSelCommentVo> commentList = commentMapper.selFeedCommentTop4(list);
         return list.stream().map(item -> {
-                    List<FeedSelCommentVo> eachCommentList = commentList.stream().filter(comment -> comment.getIfeed() == item.getIfeed()).toList();
-
+                    List<FeedSelCommentVo> eachCommentList = commentList.stream().filter(comment -> comment.getIfeed() == item.getIfeed()).collect(Collectors.toList());
+                    int isMoreComment = 0;
+                    if (eachCommentList.size() == 4) {
+                        isMoreComment++;
+                        eachCommentList.remove(eachCommentList.size()-1);
+                    }
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .location(item.getLocation())
@@ -107,6 +111,8 @@ public class FeedService {
                                     : favList.stream().anyMatch(fav -> fav.getFeedEntity().getIfeed() == item.getIfeed()) ?
                                     1
                                     : 0)
+                            .comments(eachCommentList)
+                            .isMoreComment(isMoreComment)
                             .build();
                 }
         ).toList();

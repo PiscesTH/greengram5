@@ -7,13 +7,13 @@
     <insert id="insFeedComment" useGeneratedKeys="true" keyProperty="ifeedComment">
         INSERT INTO t_feed_comment
         SET ifeed = #{ifeed},
-            iuser = #{iuser},
-            comment = #{comment}
+        iuser = #{iuser},
+        comment = #{comment}
     </insert>
 
     <select id="selFeedCommentAll">
         SELECT A.ifeed_comment AS ifeedComment, A.comment, A.created_at AS createdAt,
-            A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        A.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
         FROM t_feed_comment A
         JOIN t_user B
         ON A.iuser = B.iuser
@@ -24,18 +24,20 @@
 
     <select id="selFeedCommentTop4">
         SELECT A.ifeed_comment AS ifeedComment, ifeed, A.comment, A.created_at AS createdAt,
-            B.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
+        B.iuser AS writerIuser, B.nm AS writerNm, B.pic AS writerPic
         FROM (
-            SELECT ROW_NUMBER() OVER(PARTITION BY ifeed) rnum,
-                ifeed, COMMENT, ifeed_comment, iuser, created_at
-            FROM t_feed_comment
+        SELECT ROW_NUMBER() OVER(PARTITION BY ifeed) rnum,
+        ifeed, COMMENT, ifeed_comment, iuser, created_at
+        FROM t_feed_comment
+        <if test="list != null and list.size != 0">
             WHERE ifeed IN
-        <foreach collection="list" item="item" open="(" close=")" separator=",">
-            #{item.ifeed}
-        </foreach>
-            ) A
+            <foreach collection="list" item="item" open="(" close=")" separator=",">
+                #{item.ifeed}
+            </foreach>
+        </if>
+        ) A
         JOIN t_user B
-        USING (iuser)
-        WHERE A.rnum <![CDATA[ <= 4 ]]>
+        ON A.iuser = B.iuser
+        WHERE A.rnum <![CDATA[ <= ]]> 4
     </select>
 </mapper>
