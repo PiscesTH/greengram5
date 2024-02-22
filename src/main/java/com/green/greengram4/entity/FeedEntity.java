@@ -16,7 +16,7 @@ public class FeedEntity extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ifeed;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)  //@ManyToOne default -> FetchType.EAGER
     @JoinColumn(name = "iuser", nullable = false)
 //    @OnDelete(action = OnDeleteAction.CASCADE)
     private UserEntity userEntity;
@@ -31,8 +31,8 @@ public class FeedEntity extends BaseEntity{
     @OneToMany(mappedBy = "feedEntity", cascade = CascadeType.PERSIST) //mappedBy = "멤버필드명" -> 안적으면 테이블 늘어남. 영속성 전이 세팅
     private List<FeedPicsEntity> feedPicsEntityList = new ArrayList<>();
 
-    @ToString.Exclude
-    @OneToMany(mappedBy = "feedEntity")
-    private List<FeedFavEntity> feedFavList = new ArrayList<>();
+//    @ToString.Exclude
+//    @OneToMany(mappedBy = "feedEntity")
+//    private List<FeedFavEntity> feedFavList = new ArrayList<>();
 
 }
