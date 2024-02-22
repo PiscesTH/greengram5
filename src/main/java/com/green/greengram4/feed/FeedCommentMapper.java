@@ -1,5 +1,6 @@
 package com.green.greengram4.feed;
 
+import com.green.greengram4.entity.FeedEntity;
 import com.green.greengram4.feed.model.FeedInsCommentDto;
 import com.green.greengram4.feed.model.FeedSelCommentDto;
 import com.green.greengram4.feed.model.FeedSelCommentVo;
@@ -11,4 +12,5 @@ import java.util.List;
 public interface FeedCommentMapper {
     int insFeedComment(FeedInsCommentDto dto);
     List<FeedSelCommentVo> selFeedCommentAll(FeedSelCommentDto dto);
+    List<FeedSelCommentVo> selFeedCommentTop4(List<FeedEntity> entityList);
 }

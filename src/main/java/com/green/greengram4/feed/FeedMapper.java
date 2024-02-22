@@ -1,9 +1,7 @@
 package com.green.greengram4.feed;
 
-import com.green.greengram4.feed.model.FeedDelDto;
-import com.green.greengram4.feed.model.FeedInsProcDto;
-import com.green.greengram4.feed.model.FeedSelDto;
-import com.green.greengram4.feed.model.FeedSelVo;
+import com.green.greengram4.entity.FeedEntity;
+import com.green.greengram4.feed.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
