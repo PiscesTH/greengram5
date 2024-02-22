@@ -1,6 +1,7 @@
 package com.green.greengram4.feed;
 
 import com.green.greengram4.entity.FeedEntity;
+import com.green.greengram4.entity.FeedFavEntity;
 import com.green.greengram4.entity.FeedPicsEntity;
 import com.green.greengram4.feed.model.FeedSelDto;
 import com.green.greengram4.feed.model.FeedSelVo;
@@ -50,10 +51,18 @@ public class FeedQdslRepositoryImpl implements FeedQdslRepository {
 
     @Override
     public List<FeedPicsEntity> selFeedPicsAll(List<FeedEntity> feedEntityList) {
-        return jpaQueryFactory.select(Projections.fields(FeedPicsEntity.class,  //필요한 데이터만 들고 올 때 사용
+        return jpaQueryFactory.select(Projections.fields(FeedPicsEntity.class,  //Projections.fields : 필요한 데이터만 들고 올 때 사용 / 리턴타입 클래스 적어주기
                 feedPicsEntity.feedEntity, feedPicsEntity.pic))
                 .from(feedPicsEntity)
                 .where(feedPicsEntity.feedEntity.in(feedEntityList))
+                .fetch();
+    }
+
+    @Override
+    public List<FeedFavEntity> selFeedMyFavAll(List<FeedEntity> feedEntityList, long loginedIuser) {
+        return jpaQueryFactory.select(Projections.fields(FeedFavEntity.class, feedFavEntity.feedEntity))    //feedFavEntity.feedEntity.ifeed까지 적을 필요 없음.
+                .from(feedFavEntity)
+                .where(feedFavEntity.feedEntity.in(feedEntityList), feedFavEntity.userEntity.iuser.eq(loginedIuser))
                 .fetch();
     }
 

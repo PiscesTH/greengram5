@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -83,6 +84,7 @@ public class FeedService {
         List<FeedEntity> list = feedRepository.selFeedAll(dto, pageable);
 
         List<FeedPicsEntity> picList = feedRepository.selFeedPicsAll(list);
+        List<FeedFavEntity> favList = dto.getIsFavList() == 1 ? null : feedRepository.selFeedMyFavAll(list, dto.getLoginedIuser());
 
         return list.stream().map(item ->
                         FeedSelVo.builder()
@@ -93,6 +95,16 @@ public class FeedService {
                                 .writerIuser(item.getUserEntity().getIuser().intValue())
                                 .writerNm(item.getUserEntity().getNm())
                                 .writerPic(item.getUserEntity().getPic())
+                                .pics(picList.stream().filter(pic ->
+                                                pic.getFeedEntity().getIfeed().equals(item.getIfeed()))
+                                        .map(FeedPicsEntity::getPic)
+                                        .collect(Collectors.toList())
+                                )
+                                .isFav(dto.getIsFavList() == 1 ?
+                                        1
+                                        : favList.stream().anyMatch(fav -> fav.getFeedEntity().getIfeed() == item.getIfeed()) ?
+                                            1
+                                            : 0)
                                 .build())
                 .toList();
     }
