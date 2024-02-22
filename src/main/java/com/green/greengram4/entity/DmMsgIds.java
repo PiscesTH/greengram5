@@ -1,9 +1,6 @@
 package com.green.greengram4.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,6 +13,11 @@ public class DmMsgIds implements Serializable {
     private Long idm;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
+//    @SequenceGenerator(
+//            name = "sequence_generator",
+//            sequenceName = "my_seq",
+//            allocationSize = 1
+//    )
     @Column(columnDefinition = "BIGINT UNSIGNED")
     private Long seq;
 }
