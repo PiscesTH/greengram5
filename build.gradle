@@ -72,7 +72,7 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
-//query dsl
+//query dsl 개발환경이 달라져도(ex - 인텔리제이 / 이클립스) q class 생성 위치를 똑같이 설정하기 위해 있음.
 def generated = 'src/main/generated'    //변수 선언
 
 tasks.withType(JavaCompile).configureEach {
