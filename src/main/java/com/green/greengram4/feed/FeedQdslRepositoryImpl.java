@@ -4,7 +4,6 @@ import com.green.greengram4.entity.FeedEntity;
 import com.green.greengram4.entity.FeedFavEntity;
 import com.green.greengram4.entity.FeedPicsEntity;
 import com.green.greengram4.feed.model.FeedSelDto;
-import com.green.greengram4.feed.model.FeedSelVo;
 import com.green.greengram4.security.AuthenticationFacade;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
